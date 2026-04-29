@@ -7,6 +7,14 @@
 .intro-rule-box strong { color: #F57F17; }
 .intro-task-box strong { color: #1565C0; }
 
+.designer-credit {
+    font-size: 1.1rem;
+    color: #5C6BC0;
+    font-weight: 600;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
 :root {
 
     --primary:   #5C6BC0;
