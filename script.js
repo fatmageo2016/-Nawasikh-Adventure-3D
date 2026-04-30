@@ -8,7 +8,7 @@ const LEVEL_INTRO_DATA = {
         subtitle: '"تحدي المبتدأ والخبر"',
         motivation: 'أهلاً بك يا بطل في بداية الرحلة! قبل أن نواجه النواسخ، علينا أولاً أن نتقن بناء البيت الأصلي.. "الجملة الاسمية". هل يمكنك ضبط المبتدأ والخبر ليكون البناء متوازناً؟',
         task: 'اختر العلامة الإعرابية الصحيحة (الضمة، الألف، أو الواو) لرفع المبتدأ والخبر لتجتاز البوابة الأولى.',
-        rule: 'تذكر دائماً.. المبتدأ والخبر توأمان في "الرفع". يُرفعان بالضمة (مفرد/جمع مؤنث/جمع تكسير)، وبالألف (مثنى)، وبالواو (جمع مذكر سالم/أسماء خمسة).'
+        rule: 'تذكر دائماً.. مبتدأ وخبر توأمان في "رفع". يُرفعان بالضمة (مفرد/جمع مؤنث/جمع تكسير)، وبالألف (مثنى)، وبالواو (جمع مذكر سالم/من الأسماء الخمسة).'
     },
     2: {
         icon: '🔵',
@@ -16,7 +16,7 @@ const LEVEL_INTRO_DATA = {
         subtitle: '"تحدي الحروف الناسخة"',
         motivation: 'أهلاً بك يا بطل في أولى محطات المغامرة! هل أنت مستعد لتغيير موازين الجملة الاسمية؟ الحروف الناسخة تنتظر ذكاءك لترتب صفوفها.',
         task: 'ستظهر لك جمل اسمية "مهتزة"، عليك اختيار الكلمة الصحيحة التي تلي الحرف الناسخ لتستقر الجملة وتكسب النقاط.',
-        rule: 'تذكر دائماً.. (إنَّ وأخواتها) حروف قوية، تدخل على الجملة فـ "تنصب" المبتدأ (بالفتحة أو الياء أو الألف) و "ترفع" الخبر. كن دقيقاً في اختيار علامة النصب!'
+        rule: 'تذكر دائماً.. (إنَّ وأخواتها) حروف قوية، تدخل على جملة فـ "تنصب" مبتدأ (بالفتحة أو بالياء أو بالألف) و "ترفع" خبر. كن دقيقاً في اختيار علامة نصب!'
     },
     3: {
         icon: '🟠',
@@ -24,7 +24,7 @@ const LEVEL_INTRO_DATA = {
         subtitle: '"معركة الأفعال الناسخة"',
         motivation: 'رائع! لقد اجتزت الحروف، لكن الآن واجهت "الأفعال" التي تقلب القواعد! حصن "كان" يحتاج إلى قائد يتقن ضبط الأواخر. هل ستكون أنت هذا القائد؟',
         task: 'وازن الجملة باختيار "خبر كان" الصحيح. العلامات الإعرابية هنا هي مفتاح الفوز، فخطأ واحد قد يكلفك خسارة العملات!',
-        rule: 'انتبه.. (كان وأخواتها) أفعال مغيرة، فهي "ترفع" المبتدأ و "تنصب" الخبر. ركز جيداً على الخبر، فهو من سيحتاج منك لمسة التصحيح (بالفتحة أو الياء أو الكسرة في جمع المؤنث).'
+        rule: 'انتبه.. (كان وأخواتها) أفعال مغيرة، فهي "ترفع" مبتدأ و "تنصب" خبر. ركز جيداً على خبر، فهو من سيحتاج منك لمسة تصحيح (بالفتحة أو بالياء أو بالكسرة في جمع مؤنث).'
     },
     4: {
         icon: '🟣',
@@ -32,7 +32,7 @@ const LEVEL_INTRO_DATA = {
         subtitle: '"ساحة العمالقة - الاختبار النهائي"',
         motivation: 'أنت الآن في منطقة العمالقة! لا مجال للتردد. هنا تختلط الحروف بالأفعال، وتظهر الكلمات الممنوعة من الصرف لتختبر تركيزك العالي. أثبت لنا أنك "خبير النواسخ" الأول!',
         task: 'سريعة ودقيقة؛ هكذا يجب أن تكون إجاباتك. ميز بين "إنَّ" و "كانَ" في لمح البصر، وانتبه للكلمات التي لا تقبل التنوين (الممنوعة من الصرف).',
-        rule: 'القاعدة هي "التركيز التام". قارن بين تأثير الحرف وتأثير الفعل قبل الاختيار. المبتدأ منصوب مع إنَّ، والخبر منصوب مع كانَ. انطلق نحو الشارة الذهبية!'
+        rule: 'قاعدة هي "تركيز تام". قارن بين تأثير حرف وتأثير فعل قبل اختيار. مبتدأ منصوب مع إنَّ، وخبر منصوب مع كانَ. انطلق نحو شارة ذهبية!'
     }
 };
 
@@ -46,9 +46,9 @@ const LEVEL_COMPLETE_DATA = {
 
 function getMotivationMessage(level, errors) {
     // رسالة تبعاً للأخطاء
-    const perfect   = errors === 0;
+    const perfect = errors === 0;
     const nearPerfect = errors <= 2;
-    const decent    = errors <= 5;
+    const decent = errors <= 5;
 
     const byError = perfect
         ? '⭐ أنت بطل لا يُقهر! أداء مثالي تماماً!'
@@ -73,39 +73,39 @@ function getMotivationMessage(level, errors) {
 // نظام الشارات
 // ════════════════════════════════════════════════
 const BADGES = [
-    { id:'perfect',      icon:'🌟', name:'بلا أخطاء',    desc:'أكملت اللعبة دون أي خطأ', check:(s)=>s.errors===0 },
-    { id:'fast',         icon:'⚡', name:'سريع البرق',   desc:'أكملت في أقل من دقيقتين', check:(s)=>s.time<120 },
-    { id:'fullscore',    icon:'🏆', name:'المتفوق',      desc:'حصلت على النقاط الكاملة 70', check:(s)=>s.score>=70 },
-    { id:'legend',       icon:'🔥', name:'الأسطورة',     desc:'بلا أخطاء وأسرع من دقيقتين', check:(s)=>s.errors===0&&s.time<120 },
-    { id:'scholar',      icon:'📚', name:'العالم',       desc:'لعبت 3 مرات أو أكثر', check:(s,p)=>(p.totalGames||0)>=3 },
-    { id:'diamond',      icon:'💎', name:'الماسة',       desc:'حصلت على المركز الأول', check:(s)=>s.rank===1 },
-    { id:'persistent',   icon:'🌙', name:'المثابر',      desc:'لعبت 5 ألعاب أو أكثر', check:(s,p)=>(p.totalGames||0)>=5 },
-    { id:'perfect3',     icon:'🎯', name:'الدقيق',       desc:'3 ألعاب متتالية بلا أخطاء', check:(s,p)=>(p.perfectStreak||0)>=3 },
-    { id:'speed_perfect',icon:'🚀', name:'رائد الفضاء',  desc:'بلا أخطاء وأسرع من دقيقة', check:(s)=>s.errors===0&&s.time<60 },
-    { id:'coins100',     icon:'🪙', name:'جامع الكنوز',  desc:'جمعت 100 عملة أو أكثر', check:(s,p)=>(p.totalCoins||0)>=100 }
+    { id: 'perfect', icon: '🌟', name: 'بلا أخطاء', desc: 'أكملت اللعبة دون أي خطأ', check: (s) => s.errors === 0 },
+    { id: 'fast', icon: '⚡', name: 'سريع البرق', desc: 'أكملت في أقل من دقيقتين', check: (s) => s.time < 120 },
+    { id: 'fullscore', icon: '🏆', name: 'المتفوق', desc: 'حصلت على النقاط الكاملة 70', check: (s) => s.score >= 70 },
+    { id: 'legend', icon: '🔥', name: 'الأسطورة', desc: 'بلا أخطاء وأسرع من دقيقتين', check: (s) => s.errors === 0 && s.time < 120 },
+    { id: 'scholar', icon: '📚', name: 'العالم', desc: 'لعبت 3 مرات أو أكثر', check: (s, p) => (p.totalGames || 0) >= 3 },
+    { id: 'diamond', icon: '💎', name: 'الماسة', desc: 'حصلت على المركز الأول', check: (s) => s.rank === 1 },
+    { id: 'persistent', icon: '🌙', name: 'المثابر', desc: 'لعبت 5 ألعاب أو أكثر', check: (s, p) => (p.totalGames || 0) >= 5 },
+    { id: 'perfect3', icon: '🎯', name: 'الدقيق', desc: '3 ألعاب متتالية بلا أخطاء', check: (s, p) => (p.perfectStreak || 0) >= 3 },
+    { id: 'speed_perfect', icon: '🚀', name: 'رائد الفضاء', desc: 'بلا أخطاء وأسرع من دقيقة', check: (s) => s.errors === 0 && s.time < 60 },
+    { id: 'coins100', icon: '🪙', name: 'جامع الكنوز', desc: 'جمعت 100 عملة أو أكثر', check: (s, p) => (p.totalCoins || 0) >= 100 }
 ];
 
 function calcCoins(score, errors, time) {
     let c = score;
-    if (errors===0)  c += 50;
-    else             c -= errors*3;
-    if (time<60)     c += 30;
-    else if(time<120)c += 15;
-    else if(time<180)c += 5;
-    return Math.max(c,0);
+    if (errors === 0) c += 50;
+    else c -= errors * 3;
+    if (time < 60) c += 30;
+    else if (time < 120) c += 15;
+    else if (time < 180) c += 5;
+    return Math.max(c, 0);
 }
 function calcStars(errors) {
-    return errors===0 ? 3 : errors<=3 ? 2 : 1;
+    return errors === 0 ? 3 : errors <= 3 ? 2 : 1;
 }
 
 // ════════════════════════════════════════════════
 // الأفاتارات
 // ════════════════════════════════════════════════
 const AVATARS = [
-    '🦁','🐯','🦊','🐻','🐼','🐨',
-    '🦋','🦜','🐬','🦅','🌟','🚀',
-    '🎯','🎨','🎭','🏆','⚡','🌙',
-    '🔥','💎','🎸','🍀','🌺','🦄','🐙'
+    '🦁', '🐯', '🦊', '🐻', '🐼', '🐨',
+    '🦋', '🦜', '🐬', '🦅', '🌟', '🚀',
+    '🎯', '🎨', '🎭', '🏆', '⚡', '🌙',
+    '🔥', '💎', '🎸', '🍀', '🌺', '🦄', '🐙'
 ];
 
 // ════════════════════════════════════════════════
@@ -179,10 +179,10 @@ const ALL_LEVELS_DATA = {
 // التغذية الراجعة لكل قاعدة
 // ════════════════════════════════════════════════
 const RULE_FEEDBACK = {
-    1: '⭐ القاعدة الذهبية: المبتدأ والخبر توأمان في الرفع (بالضمة، أو الألف، أو الواو)',
-    2: '📗 القاعدة الذهبية: (إنَّ وأخواتها) حروف قوية، تنصب المبتدأ (بالفتحة/الياء/الألف) وترفع الخبر.',
-    3: '📙 القاعدة الذهبية: (كان وأخواتها) أفعال مغيرة، ترفع المبتدأ وتنصب الخبر (بالفتحة/الياء/الكسرة).',
-    4: '🏆 ساحة العمالقة: قارن بين تأثير الحرف (إنَّ) والفعل (كانَ) قبل الاختيار. المبتدأ منصوب مع إنَّ، والخبر منصوب مع كانَ.'
+    1: '⭐ قاعدة ذهبية: مبتدأ وخبر توأمان في رفع ',
+    2: '📗 قاعدة ذهبية: (إنَّ وأخواتها) حروف قوية، تنصب مبتدأ، وترفع خبر.',
+    3: '📙 قاعدة ذهبية: (كان وأخواتها) أفعال مغيرة، ترفع مبتدأ وتنصب خبر (بالفتحة/بالياء/بالكسرة).',
+    4: '🏆 ساحة عمالقة: قارن بين تأثير حرف (إنَّ) وفعل (كانَ) قبل اختيار. مبتدأ منصوب مع إنَّ، وخبر منصوب مع كانَ.'
 };
 
 
@@ -190,15 +190,15 @@ const RULE_FEEDBACK = {
 // ════════════════════════════════════════════════
 // حالة اللعبة
 // ════════════════════════════════════════════════
-let currentLevel   = 1;
+let currentLevel = 1;
 let currentExIndex = 0;
-let score          = 0;
-let errorCount     = 0;
-let sessionCoins   = 0;
-let draggedPiece   = null;
+let score = 0;
+let errorCount = 0;
+let sessionCoins = 0;
+let draggedPiece = null;
 let currentValidate = null;
-let currentRuleLevel = 1; 
-let exitContext    = 'game'; 
+let currentRuleLevel = 1;
+let exitContext = 'game';
 
 // متغيرات الـ 3D الجديدة
 let selected3DPiece = null;
@@ -240,7 +240,7 @@ function createTextTexture(text, color = "#1A237E", bgColor = "#FFFFFF") {
  * تحميل مسبق للخط لضمان ظهور النص صحيحاً (مهم لبيئة Streamlit)
  */
 function preloadFont() {
-    return document.fonts.load("900 20px 'Cairo'").catch(() => {});
+    return document.fonts.load("900 20px 'Cairo'").catch(() => { });
 }
 
 // إضافة المستمعات الأساسية مرة واحدة فقط عند التحميل
@@ -255,21 +255,22 @@ function setLookControls(enabled) {
     if (cam) cam.setAttribute('look-controls', `enabled: ${enabled}`);
 }
 
-let playerName   = '';
+let playerName = '';
 let playerAvatar = AVATARS[0];
 let selectedAvIdx = 0;
 
-let timerInterval  = null;
+let timerInterval = null;
 let elapsedSeconds = 0;
+let gameMode = 'Standard'; // 'Standard' or 'VR'
 
-const TOTAL_LEVELS       = 4;
+const TOTAL_LEVELS = 4;
 function getExamplesForCurrentLevel() {
     return ALL_LEVELS_DATA[currentLevel] || ALL_LEVELS_DATA[1];
 }
 
 
-const LS_LB_KEY          = 'nawasikh_leaderboard';
-const LS_PL_KEY          = 'nawasikh_players';
+const LS_LB_KEY = 'nawasikh_leaderboard';
+const LS_PL_KEY = 'nawasikh_players';
 
 // ════════════════════════════════════════════════
 // Init
@@ -279,35 +280,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // أزرار التسجيل
     document.getElementById('start-btn').addEventListener('click', onStartClick);
-    document.getElementById('show-leaderboard-btn').addEventListener('click', ()=>showLeaderboard());
-    document.getElementById('player-name-input').addEventListener('keydown', e=>{ if(e.key==='Enter') onStartClick(); });
+    document.getElementById('show-leaderboard-btn').addEventListener('click', () => showLeaderboard());
+    document.getElementById('player-name-input').addEventListener('keydown', e => { if (e.key === 'Enter') onStartClick(); });
     document.getElementById('player-name-input').addEventListener('input', onNameInput);
+    document.getElementById('show-teacher-btn').addEventListener('click', requestTeacherAccess);
+    document.getElementById('submit-password-btn').addEventListener('click', submitTeacherPassword);
+    document.getElementById('cancel-password-btn').addEventListener('click', cancelTeacherPassword);
+    document.getElementById('teacher-password-input').addEventListener('keydown', e => { if (e.key === 'Enter') submitTeacherPassword(); });
 
     // داخل اللعبة
     document.getElementById('next-btn').addEventListener('click', goToNext);
-    document.getElementById('in-game-exit-btn').addEventListener('click', ()=>requestExit('game'));
+    document.getElementById('in-game-exit-btn').addEventListener('click', () => requestExit('game'));
     document.getElementById('start-level-btn').addEventListener('click', startActualLevel);
 
 
     // شاشة إكمال المستوى
     document.getElementById('continue-btn').addEventListener('click', onContinue);
-    document.getElementById('lc-exit-btn').addEventListener('click',  ()=>requestExit('level-complete'));
+    document.getElementById('lc-exit-btn').addEventListener('click', () => requestExit('level-complete'));
 
     // تأكيد / إلغاء الخروج
     document.getElementById('confirm-exit-btn').addEventListener('click', confirmExit);
-    document.getElementById('cancel-exit-btn').addEventListener('click',  cancelExit);
+    document.getElementById('cancel-exit-btn').addEventListener('click', cancelExit);
 
     // قائمة الإنجاز
-    document.getElementById('close-leaderboard-btn').addEventListener('click', ()=>
+    document.getElementById('close-leaderboard-btn').addEventListener('click', () =>
         document.getElementById('leaderboard-screen').classList.add('hidden'));
-    document.getElementById('lb-exit-btn').addEventListener('click', ()=>goToRegister());
+    document.getElementById('lb-exit-btn').addEventListener('click', () => goToRegister());
 
-    // شاشة النهاية
-    document.getElementById('restart-btn').addEventListener('click', onRestartClick);
-    document.getElementById('end-leaderboard-btn').addEventListener('click', ()=>showLeaderboard());
-    document.getElementById('end-exit-btn').addEventListener('click', ()=>goToRegister());
+    // شاشة اختيار النمط
+    document.getElementById('mode-standard').addEventListener('click', () => setGameMode('Standard'));
+    document.getElementById('mode-vr').addEventListener('click', () => setGameMode('VR'));
+    document.getElementById('back-to-reg-btn').addEventListener('click', () => {
+        document.getElementById('mode-selection-screen').classList.add('hidden');
+        document.getElementById('register-screen').classList.remove('hidden');
+    });
 
-    window.addEventListener('contextmenu', e=>e.preventDefault());
+    document.getElementById('close-teacher-btn').addEventListener('click', () => {
+        document.getElementById('teacher-dashboard-screen').classList.add('hidden');
+    });
+    document.getElementById('clear-data-btn').addEventListener('click', clearAllData);
+
+    window.addEventListener('contextmenu', e => e.preventDefault());
 
     // تهيئة كائنات THREE بعد تحميل A-Frame (مهم لبيئة Streamlit)
     const sceneEl = document.querySelector('a-scene');
@@ -316,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof THREE !== 'undefined') {
                 dragPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 3);
                 raycaster = new THREE.Raycaster();
-                mouse     = new THREE.Vector2();
+                mouse = new THREE.Vector2();
             }
         };
         if (sceneEl.hasLoaded) {
@@ -332,14 +345,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // ════════════════════════════════════════════════
 function buildAvatarGrid() {
     const grid = document.getElementById('avatar-grid');
-    AVATARS.forEach((av,i)=>{
+    AVATARS.forEach((av, i) => {
         const el = document.createElement('div');
-        el.className = 'avatar-option'+(i===0?' selected':'');
+        el.className = 'avatar-option' + (i === 0 ? ' selected' : '');
         el.textContent = av;
-        el.addEventListener('click',()=>{
-            document.querySelectorAll('.avatar-option').forEach(a=>a.classList.remove('selected'));
+        el.addEventListener('click', () => {
+            document.querySelectorAll('.avatar-option').forEach(a => a.classList.remove('selected'));
             el.classList.add('selected');
-            selectedAvIdx=i; playerAvatar=av;
+            selectedAvIdx = i; playerAvatar = av;
         });
         grid.appendChild(el);
     });
@@ -350,14 +363,14 @@ function buildAvatarGrid() {
 // ════════════════════════════════════════════════
 function onNameInput() {
     const name = document.getElementById('player-name-input').value.trim();
-    const ret  = document.getElementById('returning-player');
+    const ret = document.getElementById('returning-player');
     if (!name) { ret.classList.add('hidden'); return; }
 
     const profile = getPlayerProfile(name);
     if (!profile) { ret.classList.add('hidden'); return; }
 
-    const badgesHTML = (profile.badges||[]).slice(0,5).map(id=>{
-        const b=BADGES.find(x=>x.id===id); return b?`<span class="ret-badge-chip">${b.icon}</span>`:'';
+    const badgesHTML = (profile.badges || []).slice(0, 5).map(id => {
+        const b = BADGES.find(x => x.id === id); return b ? `<span class="ret-badge-chip">${b.icon}</span>` : '';
     }).join('');
 
     ret.innerHTML = `
@@ -373,10 +386,10 @@ function onNameInput() {
     ret.classList.remove('hidden');
 
     const avIdx = AVATARS.indexOf(profile.avatar);
-    if (avIdx!==-1) {
-        document.querySelectorAll('.avatar-option').forEach(a=>a.classList.remove('selected'));
+    if (avIdx !== -1) {
+        document.querySelectorAll('.avatar-option').forEach(a => a.classList.remove('selected'));
         document.querySelectorAll('.avatar-option')[avIdx].classList.add('selected');
-        selectedAvIdx=avIdx; playerAvatar=profile.avatar;
+        selectedAvIdx = avIdx; playerAvatar = profile.avatar;
     }
 }
 
@@ -387,27 +400,45 @@ function onStartClick() {
     const name = document.getElementById('player-name-input').value.trim();
     if (!name) {
         const inp = document.getElementById('player-name-input');
-        inp.focus(); inp.style.borderColor='#EF5350';
-        setTimeout(()=>inp.style.borderColor='',1200);
+        inp.focus(); inp.style.borderColor = '#EF5350';
+        setTimeout(() => inp.style.borderColor = '', 1200);
         return;
     }
-    playerName   = name;
+    playerName = name;
     playerAvatar = AVATARS[selectedAvIdx];
-    gsap.to('#register-screen',{opacity:0,duration:0.4,onComplete:()=>{
-        document.getElementById('register-screen').classList.add('hidden');
-        initGameSession();
-    }});
+
+    // بدلاً من بدء اللعب فوراً، ننتقل لشاشة اختيار النمط
+    gsap.to('#register-screen', {
+        opacity: 0, duration: 0.4, onComplete: () => {
+            document.getElementById('register-screen').classList.add('hidden');
+            document.getElementById('register-screen').style.opacity = '1';
+
+            // تحديث معلومات اللاعب في واجهة اختيار النمط
+            document.getElementById('mode-avatar-display').textContent = playerAvatar;
+            document.getElementById('mode-name-display').textContent = playerName;
+
+            document.getElementById('mode-selection-screen').classList.remove('hidden');
+            gsap.from('#mode-selection-screen .overlay-content', { scale: 0.8, opacity: 0, duration: 0.5, ease: 'back.out(1.5)' });
+        }
+    });
 }
+
+function setGameMode(mode) {
+    gameMode = mode;
+    document.getElementById('mode-selection-screen').classList.add('hidden');
+    initGameSession();
+}
+
 
 // ════════════════════════════════════════════════
 // تهيئة الجلسة
 // ════════════════════════════════════════════════
 function initGameSession() {
-    score=0; errorCount=0; sessionCoins=0;
-    currentLevel=1; currentExIndex=0; elapsedSeconds=0;
+    score = 0; errorCount = 0; sessionCoins = 0;
+    currentLevel = 1; currentExIndex = 0; elapsedSeconds = 0;
     document.getElementById('header-avatar').textContent = playerAvatar;
-    document.getElementById('header-name').textContent   = playerName;
-    document.getElementById('coins-display').textContent = getPlayerProfile(playerName)?.totalCoins||0;
+    document.getElementById('header-name').textContent = playerName;
+    document.getElementById('coins-display').textContent = getPlayerProfile(playerName)?.totalCoins || 0;
     updateHeader();
     startTimer();
     // انتظار تحميل الخط أولاً لضمان ظهور النص الصحيح على Streamlit
@@ -417,14 +448,14 @@ function initGameSession() {
 // ════════════════════════════════════════════════
 // المؤقت
 // ════════════════════════════════════════════════
-function startTimer() { clearInterval(timerInterval); elapsedSeconds=0; renderTimer(); timerInterval=setInterval(()=>{elapsedSeconds++;renderTimer();},1000); }
-function stopTimer()  { clearInterval(timerInterval); }
+function startTimer() { clearInterval(timerInterval); elapsedSeconds = 0; renderTimer(); timerInterval = setInterval(() => { elapsedSeconds++; renderTimer(); }, 1000); }
+function stopTimer() { clearInterval(timerInterval); }
 function renderTimer() {
-    const m=String(Math.floor(elapsedSeconds/60)).padStart(2,'0');
-    const s=String(elapsedSeconds%60).padStart(2,'0');
-    document.getElementById('timer').textContent=`${m}:${s}`;
+    const m = String(Math.floor(elapsedSeconds / 60)).padStart(2, '0');
+    const s = String(elapsedSeconds % 60).padStart(2, '0');
+    document.getElementById('timer').textContent = `${m}:${s}`;
 }
-function formatTime(sec) { return String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0'); }
+function formatTime(sec) { return String(Math.floor(sec / 60)).padStart(2, '0') + ':' + String(sec % 60).padStart(2, '0'); }
 
 // ════════════════════════════════════════════════
 // تحديث الهيدر
@@ -436,17 +467,17 @@ function updateHeader() {
     // تحديث الأفاتار والاسم في الهيدر
     document.getElementById('header-avatar').textContent = playerAvatar;
     document.getElementById('header-name').textContent = playerName;
-    
+
     // تحديث الإحصائيات مع التأكد من مطابقة الـ IDs في HTML
     const scoreEl = document.getElementById('score');
     if (scoreEl) scoreEl.innerText = score;
-    
+
     const levelEl = document.getElementById('level');
     if (levelEl) levelEl.innerText = currentLevel;
 
     const coinsEl = document.getElementById('coins-display');
     if (coinsEl) coinsEl.innerText = sessionCoins;
-    
+
     const errorsEl = document.getElementById('errors');
     if (errorsEl) errorsEl.innerText = errorCount;
 
@@ -454,7 +485,7 @@ function updateHeader() {
     const pct = (currentExIndex / examplesCount) * 100;
     const bar = document.getElementById('progress-bar');
     if (bar) bar.style.width = `${pct}%`;
-    
+
     const txt = document.getElementById('progress-text');
     if (txt) txt.innerText = `${currentExIndex + 1} / ${examplesCount}`;
 }
@@ -472,43 +503,43 @@ function buildQuestion(ex) {
         type = innaSisters.some(s => ex.nasikh.includes(s)) ? 2 : 3;
     }
 
-    switch(type) {
+    switch (type) {
         case 1:
             currentRuleLevel = 1;
             return {
-                instruction:`🏰 <strong>المستوى الأول: بوابة الجملة الاسمية</strong><br>
+                instruction: `🏰 <strong>المستوى الأول: بوابة الجملة الاسمية</strong><br>
                 <small>أهلاً بك يا بطل! لنضبط المبتدأ والخبر لنبني البيت الأصلي "الجملة الاسمية".</small><br>
                 🎯 <strong>المطلوب:</strong> اختر علامة الرفع الصحيحة (الضمة، الألف، الواو).`,
-                pieces:shuffle([{text:ex.ism,type:"MUBTADA"},{text:ex.khabar,type:"KHABAR"},{text:ex.ism_decoy,type:"DECOY"},{text:ex.khabar_decoy,type:"DECOY"}]),
-                slotCount:2, validate:seq=>seq[0]==="MUBTADA"&&seq[1]==="KHABAR"
+                pieces: shuffle([{ text: ex.ism, type: "MUBTADA" }, { text: ex.khabar, type: "KHABAR" }, { text: ex.ism_decoy, type: "DECOY" }, { text: ex.khabar_decoy, type: "DECOY" }]),
+                slotCount: 2, validate: seq => seq[0] === "MUBTADA" && seq[1] === "KHABAR"
             };
 
         case 2:
             currentRuleLevel = 2;
             return {
-                instruction:`🔵 <strong>المستوى الثاني: بوابة "إنَّ" وأخواتها</strong><br>
+                instruction: `🔵 <strong>المستوى الثاني: بوابة "إنَّ" وأخواتها</strong><br>
                 <small>أهلاً بك يا بطل! هل أنت مستعد لتغيير موازين الجملة الاسمية؟ الحروف الناسخة تنتظر ذكاءك.</small><br>
                 🎯 <strong>المطلوب:</strong> اختر الكلمة الصحيحة التي تلي الحرف الناسخ لتستقر الجملة.`,
-                pieces:shuffle([{text:ex.nasikh,type:"NASIKH"},{text:ex.ism,type:"ISM"},{text:ex.khabar,type:"KHABAR"},{text:ex.ism_decoy,type:"DECOY"},{text:ex.khabar_decoy,type:"DECOY"}]),
-                slotCount:3, validate:seq=>seq[0]==="NASIKH"&&seq[1]==="ISM"&&seq[2]==="KHABAR"
+                pieces: shuffle([{ text: ex.nasikh, type: "NASIKH" }, { text: ex.ism, type: "ISM" }, { text: ex.khabar, type: "KHABAR" }, { text: ex.ism_decoy, type: "DECOY" }, { text: ex.khabar_decoy, type: "DECOY" }]),
+                slotCount: 3, validate: seq => seq[0] === "NASIKH" && seq[1] === "ISM" && seq[2] === "KHABAR"
             };
         case 3:
             currentRuleLevel = 3;
             return {
-                instruction:`🟠 <strong>المستوى الثالث: حصن "كانَ" وأخواتها</strong><br>
+                instruction: `🟠 <strong>المستوى الثالث: حصن "كانَ" وأخواتها</strong><br>
                 <small>حصن "كان" يحتاج إلى قائد يتقن ضبط الأواخر. هل ستكون أنت هذا القائد؟</small><br>
                 🎯 <strong>المطلوب:</strong> وازن الجملة باختيار "خبر كان" الصحيح. العلامات الإعرابية هي مفتاح الفوز!`,
-                pieces:shuffle([{text:ex.nasikh,type:"NASIKH"},{text:ex.ism,type:"ISM"},{text:ex.khabar,type:"KHABAR"},{text:ex.ism_decoy,type:"DECOY"},{text:ex.khabar_decoy,type:"DECOY"}]),
-                slotCount:3, validate:seq=>seq[0]==="NASIKH"&&seq[1]==="ISM"&&seq[2]==="KHABAR"
+                pieces: shuffle([{ text: ex.nasikh, type: "NASIKH" }, { text: ex.ism, type: "ISM" }, { text: ex.khabar, type: "KHABAR" }, { text: ex.ism_decoy, type: "DECOY" }, { text: ex.khabar_decoy, type: "DECOY" }]),
+                slotCount: 3, validate: seq => seq[0] === "NASIKH" && seq[1] === "ISM" && seq[2] === "KHABAR"
             };
         case 4:
             currentRuleLevel = 4;
             return {
-                instruction:`🟣 <strong>المستوى الرابع: التحدي المختلط (ساحة العمالقة)</strong><br>
+                instruction: `🟣 <strong>المستوى الرابع: التحدي المختلط (ساحة العمالقة)</strong><br>
                 <small>لا مجال للتردد! هنا تختلط الحروف بالأفعال، وتظهر الكلمات الممنوعة من الصرف لتختبر تركيزك.</small><br>
                 🎯 <strong>المطلوب:</strong> ميز بين "إنَّ" و "كانَ" في لمح البصر وانتبه للكلمات الممنوعة من الصرف!`,
-                pieces:shuffle([{text:ex.nasikh,type:"NASIKH"},{text:ex.ism,type:"ISM"},{text:ex.khabar,type:"KHABAR"},{text:ex.ism_decoy,type:"DECOY"},{text:ex.khabar_decoy,type:"DECOY"}]),
-                slotCount:3, validate:seq=>seq[0]==="NASIKH"&&seq[1]==="ISM"&&seq[2]==="KHABAR"
+                pieces: shuffle([{ text: ex.nasikh, type: "NASIKH" }, { text: ex.ism, type: "ISM" }, { text: ex.khabar, type: "KHABAR" }, { text: ex.ism_decoy, type: "DECOY" }, { text: ex.khabar_decoy, type: "DECOY" }]),
+                slotCount: 3, validate: seq => seq[0] === "NASIKH" && seq[1] === "ISM" && seq[2] === "KHABAR"
             };
     }
 }
@@ -536,9 +567,53 @@ function showLevelIntro(level) {
     document.getElementById('intro-task').textContent = data.task;
     document.getElementById('intro-rule').textContent = data.rule;
 
+    // تحديث معلومات اللاعب في واجهة التقديم
+    document.getElementById('intro-avatar-display').textContent = playerAvatar;
+    document.getElementById('intro-name-display').textContent = playerName;
+
     const screen = document.getElementById('level-intro-screen');
     screen.classList.remove('hidden');
-    gsap.from('#level-intro-screen .overlay-content', {scale: 0.8, opacity: 0, duration: 0.5, ease: 'back.out(1.5)'});
+    gsap.from('#level-intro-screen .overlay-content', { scale: 0.8, opacity: 0, duration: 0.5, ease: 'back.out(1.5)' });
+
+    // إذا كنا في وضع VR: عرض زر "ابدأ" ثلاثي الأبعاد أيضاً
+    if (isInVRMode()) {
+        show3DLevelIntroButton();
+    }
+}
+
+function show3DLevelIntroButton() {
+    const world = document.getElementById('puzzle-world');
+    if (!world) return;
+
+    // إزالة أي زر قديم
+    const oldBtn = document.getElementById('vr-start-btn');
+    if (oldBtn) oldBtn.parentNode.removeChild(oldBtn);
+
+    const btnEl = document.createElement('a-entity');
+    btnEl.setAttribute('id', 'vr-start-btn');
+    btnEl.setAttribute('position', '0 1.5 -2'); // أمام المستخدم مباشرة
+
+    const texture = createFeedbackTexture([
+        { text: 'إضغط هنا للبدء 🚀', bold: true }
+    ], '#4CAF50', '#FFFFFF');
+
+    const img = document.createElement('a-image');
+    img.setAttribute('src', texture);
+    img.setAttribute('width', '2.5');
+    img.setAttribute('height', '1');
+    img.setAttribute('class', 'clickable-vr-start');
+    img.setAttribute('material', 'shader: flat; transparent: true');
+
+    // إضافة تأثير نبض للزر
+    img.setAttribute('animation', 'property: scale; dir: alternate; dur: 1000; loop: true; to: 1.1 1.1 1.1');
+
+    btnEl.appendChild(img);
+    btnEl.addEventListener('click', () => {
+        btnEl.parentNode.removeChild(btnEl);
+        startActualLevel();
+    });
+
+    world.appendChild(btnEl);
 }
 
 function startActualLevel() {
@@ -550,42 +625,85 @@ function startActualLevel() {
 function continueLoadingExample() {
     const examples = getExamplesForCurrentLevel();
     const ex = examples[currentExIndex];
-    
+
     const q = buildQuestion(ex);
     currentValidate = q.validate;
 
 
-    
+
     document.getElementById('feedback').classList.add('hidden');
     document.getElementById('instruction').innerHTML = q.instruction;
-    
+
+    // إخفاء/إظهار الحاويات حسب النمط
+    if (gameMode === 'Standard') {
+        document.getElementById('standard-game-zone').classList.remove('hidden');
+        document.getElementById('three-container').classList.add('hidden');
+        loadStandardPuzzle(q);
+    } else {
+        document.getElementById('standard-game-zone').classList.add('hidden');
+        document.getElementById('three-container').classList.remove('hidden');
+        loadVRPuzzle(q);
+    }
+
+    updateHeader();
+}
+
+/**
+ * تحميل الألغاز للنمط العادي (2D)
+ */
+function loadStandardPuzzle(q) {
+    const slotsCont = document.getElementById('slots-container');
+    const piecesCont = document.getElementById('pieces-container');
+    slotsCont.innerHTML = '';
+    piecesCont.innerHTML = '';
+
+    // إنشاء الفتحات
+    for (let i = 0; i < q.slotCount; i++) {
+        const slot = document.createElement('div');
+        slot.className = `slot puzzle-slot puzzle-${q.slotCount}-${i}`;
+        slot.dataset.index = i;
+        slot.dataset.label = ['أولاً', 'ثانياً', 'ثالثاً'][i];
+
+        slot.addEventListener('dragover', e => e.preventDefault());
+        slot.addEventListener('drop', () => dropOnSlot(slot));
+        slotsCont.appendChild(slot);
+    }
+
+    // إنشاء القطع
+    q.pieces.forEach((pData, i) => {
+        const piece = createPuzzlePiece(pData, q.slotCount, i);
+        piecesCont.appendChild(piece);
+    });
+}
+
+/**
+ * تحميل الألغاز لنمط الـ VR (3D)
+ */
+function loadVRPuzzle(q) {
     const world = document.getElementById('puzzle-world');
     world.innerHTML = ''; // مسح المشهد السابق
-    
+
     puzzleSlots = [];
     puzzlePieces = [];
     selected3DPiece = null;
 
-    const slotSpacing = 2.6; // مسافة أكبر بين الفتحات
+    const slotSpacing = 2.6;
     const totalWidth = (q.slotCount - 1) * slotSpacing;
-    const startX = -totalWidth / 2;
 
-    // 1. إنشاء الفتحات (Slots) - من اليمين لليسار (RTL)
+    // 1. إنشاء الفتحات (Slots)
     for (let i = 0; i < q.slotCount; i++) {
         const slotEl = document.createElement('a-entity');
-        slotEl.setAttribute('geometry', {primitive: 'plane', width: 2.4, height: 1.1});
-        slotEl.setAttribute('material', {color: '#1A237E', opacity: 0.5, transparent: true, side: 'double'});
-        
+        slotEl.setAttribute('geometry', { primitive: 'plane', width: 2.4, height: 1.1 });
+        slotEl.setAttribute('material', { color: '#1A237E', opacity: 0.5, transparent: true, side: 'double' });
+
         slotEl.addEventListener('mouseenter', () => setLookControls(false));
         slotEl.addEventListener('mouseleave', () => setLookControls(true));
 
-        // حساب الموقع ليكون الـ index 0 هو الأقصى يميناً
         const xPos = (totalWidth / 2) - (i * slotSpacing);
         slotEl.setAttribute('position', `${xPos} 2.5 -3.5`);
         slotEl.setAttribute('class', 'clickable-slot');
         slotEl.dataset.index = i;
 
-        // نص توضيحي فوق الفتحة
         const textLabel = document.createElement('a-text');
         textLabel.setAttribute('value', ['أولاً', 'ثانياً', 'ثالثاً'][i]);
         textLabel.setAttribute('align', 'center');
@@ -596,67 +714,48 @@ function continueLoadingExample() {
 
         slotEl.addEventListener('click', () => onSlotClick(i));
         world.appendChild(slotEl);
-        puzzleSlots.push({el: slotEl, occupied: null});
+        puzzleSlots.push({ el: slotEl, occupied: null });
     }
 
-    // 2. إنشاء القطع (Pieces) - أيضاً من اليمين لليسار
+    // 2. إنشاء القطع (Pieces)
     const pieceSpacing = 2.5;
     const piecesTotalWidth = (q.pieces.length - 1) * pieceSpacing;
 
     q.pieces.forEach((data, idx) => {
         const pieceEl = document.createElement('a-entity');
-        pieceEl.setAttribute('geometry', {primitive: 'box', width: 2.2, height: 1.0, depth: 0.25});
-        
+        pieceEl.setAttribute('geometry', { primitive: 'box', width: 2.2, height: 1.0, depth: 0.25 });
+
         const textTexture = createTextTexture(data.text, "#000000", "#FFFFFF");
-        
-        pieceEl.setAttribute('material', {
-            src: textTexture,
-            color: '#FFFFFF',
-            metalness: 0,
-            roughness: 1,
-            emissiveIntensity: 0
-        });
-        
+        pieceEl.setAttribute('material', { src: textTexture, color: '#FFFFFF' });
+
         pieceEl.addEventListener('mouseenter', () => setLookControls(false));
         pieceEl.addEventListener('mouseleave', () => setLookControls(true));
 
         const xPos = (piecesTotalWidth / 2) - (idx * pieceSpacing);
         const yBase = 0.4;
         pieceEl.setAttribute('position', `${xPos} ${yBase} -3`);
-        // حفظ الموقع الأصلي للعودة إليه بدقة
         pieceEl.dataset.homeX = xPos;
         pieceEl.dataset.homeY = yBase;
         pieceEl.dataset.homeZ = -3;
-        
+
         pieceEl.setAttribute('class', 'clickable-piece');
         pieceEl.dataset.type = data.type;
         pieceEl.dataset.text = data.text;
 
-        // إضافة حركة طفو (مع إعطائها معرّف لإيقافها)
         const bob = gsap.to(pieceEl.object3D.position, {
-            y: yBase + 0.15,
-            duration: 1.5 + Math.random(),
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
+            y: yBase + 0.15, duration: 1.5 + Math.random(),
+            repeat: -1, yoyo: true, ease: "sine.inOut"
         });
         pieceEl.animationInstance = bob;
 
-        // تثبيت الدوران الابتدائي
-        pieceEl.object3D.rotation.set(0, 0, 0);
-        
         pieceEl.addEventListener('mousedown', (e) => start3DDrag(pieceEl, e));
         world.appendChild(pieceEl);
         puzzlePieces.push(pieceEl);
     });
 
-
-
-
-    // إضافة الأفاتار كمرشد في العالم ثلاثي الأبعاد
+    // إضافة الأفاتار كمرشد
     const guide = document.createElement('a-entity');
     guide.setAttribute('position', '3 2 -4');
-    // رسم الأفاتار على Canvas (يعمل في Streamlit و iframe)
     const avatarTexture = createTextTexture(playerAvatar, '#000000', 'rgba(0,0,0,0)');
     const guideImg = document.createElement('a-image');
     guideImg.setAttribute('src', avatarTexture);
@@ -667,9 +766,7 @@ function continueLoadingExample() {
     guide.appendChild(guideImg);
     world.appendChild(guide);
 
-    // تجهيز أيدي ה VR...
     setupVRHands();
-    updateHeader();
 }
 
 // ════════════════════════════════════════════════
@@ -716,7 +813,7 @@ function createFeedbackTexture(lines, bgColor, textColor) {
     ctx.textBaseline = 'middle';
     const lineHeight = canvas.height / (lines.length + 1);
     lines.forEach((line, i) => {
-        ctx.font = line.bold ? '900 72px Cairo, sans-serif' : '700 52px Cairo, sans-serif';
+        ctx.font = line.bold ? '900 64px Cairo, sans-serif' : '700 44px Cairo, sans-serif';
         ctx.fillText(line.text, canvas.width / 2, lineHeight * (i + 1));
     });
 
@@ -726,7 +823,7 @@ function createFeedbackTexture(lines, bgColor, textColor) {
 // ════════════════════════════════════════════════
 // عرض لوحة تغذية راجعة داخل المشهد ثلاثي الأبعاد
 // ════════════════════════════════════════════════
-function show3DFeedback(text, isSuccess, duration) {
+function show3DFeedback(title, isSuccess, duration, extraLines = []) {
     // إزالة أي لوحة سابقة
     const oldWorld = document.getElementById('vr-feedback-panel');
     if (oldWorld && oldWorld.parentNode) oldWorld.parentNode.removeChild(oldWorld);
@@ -735,22 +832,26 @@ function show3DFeedback(text, isSuccess, duration) {
     const textColor = isSuccess ? '#26A69A' : '#EF5350';
     const emoji = isSuccess ? '✅' : '❌';
 
-    const texture = createFeedbackTexture([
-        { text: emoji + ' ' + text, bold: true }
-    ], bgColor, textColor);
+    let lines = [];
+    if (extraLines.length > 0) {
+        lines = extraLines;
+    } else {
+        lines = [{ text: emoji + ' ' + title, bold: true }];
+    }
+
+    const texture = createFeedbackTexture(lines, bgColor, textColor);
 
     const feedbackEl = document.createElement('a-entity');
     feedbackEl.setAttribute('id', 'vr-feedback-panel');
 
     // نربطها بالكاميرا مباشرة (HUD) - تظهر دائماً أعلى مجال الرؤية
-    // 0 = وسط أفقياً، 0.28 = أعلى الشاشة، -1.2 = مسافة أمام الكاميرا
-    feedbackEl.setAttribute('position', '0 0.28 -1.2');
+    feedbackEl.setAttribute('position', '0 0.52 -1.2');
 
     const img = document.createElement('a-image');
     img.setAttribute('src', texture);
-    img.setAttribute('width', '0.9');
-    img.setAttribute('height', '0.45');
-    img.setAttribute('material', 'shader: flat; transparent: true');
+    img.setAttribute('width', extraLines.length > 5 ? '1.8' : '1.5');
+    img.setAttribute('height', extraLines.length > 5 ? '1.2' : '1.0');
+    img.setAttribute('material', 'shader: flat; transparent: true; depthTest: false; side: double');
     feedbackEl.appendChild(img);
 
     // إضافة للكاميرا مباشرة (HUD)
@@ -830,7 +931,7 @@ function setupVRHands() {
     if (handsSetupDone) return;
     const hands = [document.getElementById('leftHand'), document.getElementById('rightHand')];
     if (hands[0] || hands[1]) handsSetupDone = true;
-    
+
     hands.forEach(hand => {
         if (!hand) return;
 
@@ -844,15 +945,15 @@ function setupVRHands() {
 
                 const object = intersected;
                 object.setAttribute('data-vr-held', 'true');
-                
+
                 // تحريرها من أي مربع كانت فيه
                 const oldSlot = puzzleSlots.find(s => s.occupied === object);
                 if (oldSlot) oldSlot.occupied = null;
 
                 const handObj = hand.object3D;
                 const pieceObj = object.object3D;
-                
-                handObj.attach(pieceObj); 
+
+                handObj.attach(pieceObj);
                 pieceObj.rotation.set(0, 0, 0);
                 playSnap();
             }
@@ -863,7 +964,7 @@ function setupVRHands() {
         hand.addEventListener('triggerup', (evt) => {
             const world = document.getElementById('puzzle-world').object3D;
             const pieces = document.querySelectorAll('.clickable-piece');
-            
+
             pieces.forEach(piece => {
                 if (piece.getAttribute('data-vr-held') === 'true' && piece.object3D.parent === hand.object3D) {
                     piece.removeAttribute('data-vr-held');
@@ -871,7 +972,7 @@ function setupVRHands() {
 
                     // إرجاع الملكية للمشهد (object.parent = null)
                     world.attach(piece.object3D);
-                    
+
                     // التحقق من الالتصاق (Snap Logic)
                     checkVRSnap(piece);
                 }
@@ -888,7 +989,7 @@ function checkVRSnap(piece) {
         const slotPos = slot.el.object3D.position;
         const piecePos = piece.object3D.position;
         const dist = slotPos.distanceTo(piecePos);
-        
+
         if (dist < minDistance) {
             foundSlot = slot;
             minDistance = dist;
@@ -899,7 +1000,7 @@ function checkVRSnap(piece) {
         onSlotSnap(foundSlot, piece);
     } else {
         // إرجاع القطعة لمكانها الأصلي
-        gsap.to(piece.object3D.position, {y: 0.4, z: -3, duration: 0.5});
+        gsap.to(piece.object3D.position, { y: 0.4, z: -3, duration: 0.5 });
     }
 }
 
@@ -907,7 +1008,7 @@ function start3DDrag(el, e) {
     if (el.dataset.locked === 'true') return; // لا تسمح بسحبها إذا كانت مقفولة
 
     if (el.animationInstance) el.animationInstance.pause();
-    
+
     // إذا كانت القطعة خارجة من فتحة، نحرر هذه الفتحة ونعيد القطعة للمشهد العام
     const oldSlot = puzzleSlots.find(s => s.occupied === el);
     if (oldSlot) {
@@ -917,9 +1018,9 @@ function start3DDrag(el, e) {
 
     selected3DPiece = el;
     isDragging3D = true;
-    setLookControls(false); 
+    setLookControls(false);
     el.setAttribute('material', 'color', '#FFEB3B');
-    gsap.to(el.object3D.scale, {x: 1.1, y: 1.1, z: 1.1, duration: 0.2});
+    gsap.to(el.object3D.scale, { x: 1.1, y: 1.1, z: 1.1, duration: 0.2 });
     playSnap();
 }
 
@@ -935,22 +1036,22 @@ function on3DMouseMove(e) {
 
     if (scene.camera) {
         raycaster.setFromCamera(mouse, scene.camera);
-        
+
         let intersection = new THREE.Vector3();
         if (raycaster.ray.intersectPlane(dragPlane, intersection)) {
             selected3DPiece.object3D.position.copy(intersection);
             // Freeze Rotation: التأكد من أن القطعة تظل مستوية دائماً أثناء السحب
-            selected3DPiece.object3D.rotation.set(0, 0, 0); 
+            selected3DPiece.object3D.rotation.set(0, 0, 0);
         }
     }
 }
 
 function on3DDragEnd(e) {
     if (!isDragging3D || !selected3DPiece) return;
-    
+
     isDragging3D = false;
     setLookControls(true); // إعادة تفعيل الدوران
-    
+
     // البحث عن أقرب فتحة - تقليل المدى لمنع التداخل (النصف تماماً)
     let foundSlot = null;
     let minDistance = 1.1; // نصف المسافة بين الفتحات لضمان عدم التداخل
@@ -960,7 +1061,7 @@ function on3DDragEnd(e) {
         const piecePos = selected3DPiece.object3D.position;
         // حساب المسافة في المستوى X و Y فقط لتسهيل الجذب
         const dist = Math.sqrt(Math.pow(slotPos.x - piecePos.x, 2) + Math.pow(slotPos.y - piecePos.y, 2));
-        
+
         if (dist < minDistance) {
             foundSlot = slot;
             minDistance = dist;
@@ -974,14 +1075,14 @@ function on3DDragEnd(e) {
         const hX = selected3DPiece.dataset.homeX;
         const hY = selected3DPiece.dataset.homeY;
         const hZ = selected3DPiece.dataset.homeZ;
-        
+
         selected3DPiece.setAttribute('material', 'color', '#FFFFFF');
-        gsap.to(selected3DPiece.object3D.position, {x: hX, y: hY, z: hZ, duration: 0.4, ease: "power2.out"});
-        
+        gsap.to(selected3DPiece.object3D.position, { x: hX, y: hY, z: hZ, duration: 0.4, ease: "power2.out" });
+
         if (selected3DPiece.animationInstance) selected3DPiece.animationInstance.resume();
     }
 
-    gsap.to(selected3DPiece.object3D.scale, {x: 1, y: 1, z: 1, duration: 0.2});
+    gsap.to(selected3DPiece.object3D.scale, { x: 1, y: 1, z: 1, duration: 0.2 });
     selected3DPiece = null;
 }
 
@@ -990,22 +1091,22 @@ function onSlotSnap(slot, piece) {
     if (slot.occupied && slot.occupied !== piece) {
         const oldPiece = slot.occupied;
         oldPiece.dataset.locked = 'false'; // فك القفل مهم جداً
-        
+
         const hX = oldPiece.dataset.homeX;
         const hY = oldPiece.dataset.homeY;
         const hZ = oldPiece.dataset.homeZ;
-        
+
         oldPiece.setAttribute('material', 'color', '#FFFFFF');
         // إعادة القطعة القديمة للمشهد العام قبل تحريكها
         document.getElementById('puzzle-world').object3D.attach(oldPiece.object3D);
-        
-        gsap.to(oldPiece.object3D.position, {x: hX, y: hY, z: hZ, duration: 0.4});
+
+        gsap.to(oldPiece.object3D.position, { x: hX, y: hY, z: hZ, duration: 0.4 });
         if (oldPiece.animationInstance) oldPiece.animationInstance.resume();
     }
 
     slot.occupied = piece;
     piece.dataset.locked = 'true'; // قفل القطعة
-    
+
     // تثبيت داخل المربع (Parenting)
     slot.el.object3D.attach(piece.object3D);
 
@@ -1016,22 +1117,37 @@ function onSlotSnap(slot, piece) {
         duration: 0.3,
         ease: "power3.out"
     });
-    
+
     // إيقاف الطفو تماماً عند الالتصاق
     if (piece.animationInstance) piece.animationInstance.pause();
-    
+
     piece.setAttribute('material', 'color', '#FFF9C4');
     playSnap();
     checkCompletion();
 }
 
 function checkCompletion() {
-    if (puzzleSlots.every(s => s.occupied !== null)) {
-        const seq = puzzleSlots.map(s => s.occupied.dataset.type);
-        if (currentValidate(seq)) {
-            handleSuccess(puzzleSlots.map(s => s.el));
-        } else {
-            handleError(puzzleSlots.map(s => s.el));
+    if (gameMode === 'Standard') {
+        const slots = Array.from(document.querySelectorAll('.slot'));
+        if (slots.length > 0 && slots.every(s => s.children.length > 0)) {
+            const seq = slots.map(s => {
+                const piece = s.querySelector('.piece');
+                return piece ? piece.dataset.type : null;
+            });
+            if (currentValidate(seq)) {
+                handleSuccess(slots);
+            } else {
+                handleError(slots);
+            }
+        }
+    } else {
+        if (puzzleSlots.length > 0 && puzzleSlots.every(s => s.occupied !== null)) {
+            const seq = puzzleSlots.map(s => s.occupied.dataset.type);
+            if (currentValidate(seq)) {
+                handleSuccess(puzzleSlots);
+            } else {
+                handleError(puzzleSlots);
+            }
         }
     }
 }
@@ -1055,19 +1171,19 @@ function createPuzzlePiece(data, slotCount, pieceIndex) {
 
     p.addEventListener('dragstart', handleDragStart);
     p.addEventListener('dragend', handleDragEnd);
-    p.addEventListener('touchstart', handleTouchStart, {passive:false});
-    p.addEventListener('touchmove',  handleTouchMove,  {passive:false});
-    p.addEventListener('touchend',   handleTouchEnd);
+    p.addEventListener('touchstart', handleTouchStart, { passive: false });
+    p.addEventListener('touchmove', handleTouchMove, { passive: false });
+    p.addEventListener('touchend', handleTouchEnd);
     return p;
 }
 
 function createPiece(data) {
-    const p=document.createElement('div');
-    p.className='piece'; p.innerText=data.text; p.dataset.type=data.type; p.draggable=true;
-    p.addEventListener('dragstart',handleDragStart); p.addEventListener('dragend',handleDragEnd);
-    p.addEventListener('touchstart',handleTouchStart,{passive:false});
-    p.addEventListener('touchmove', handleTouchMove, {passive:false});
-    p.addEventListener('touchend',  handleTouchEnd);
+    const p = document.createElement('div');
+    p.className = 'piece'; p.innerText = data.text; p.dataset.type = data.type; p.draggable = true;
+    p.addEventListener('dragstart', handleDragStart); p.addEventListener('dragend', handleDragEnd);
+    p.addEventListener('touchstart', handleTouchStart, { passive: false });
+    p.addEventListener('touchmove', handleTouchMove, { passive: false });
+    p.addEventListener('touchend', handleTouchEnd);
     return p;
 }
 
@@ -1093,7 +1209,7 @@ function playSnap() {
         gain.gain.setValueAtTime(0.25, ctx.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
         osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.1);
-    } catch(e) {}
+    } catch (e) { }
 }
 
 // صوت النجاح (أربيجو صاعد)
@@ -1112,7 +1228,7 @@ function playSuccess() {
             gain.gain.exponentialRampToValueAtTime(0.001, t + 0.35);
             osc.start(t); osc.stop(t + 0.35);
         });
-    } catch(e) {}
+    } catch (e) { }
 }
 
 // صوت الخطأ (طنين منخفض)
@@ -1126,99 +1242,197 @@ function playError() {
         gain.gain.setValueAtTime(0.3, ctx.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
         osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.35);
-    } catch(e) {}
+    } catch (e) { }
 }
 
 // ════════════════════════════════════════════════
 // Drag & Drop
 // ════════════════════════════════════════════════
-function handleDragStart(e){draggedPiece=this;this.classList.add('dragging');e.dataTransfer.effectAllowed='move';}
-function handleDragEnd(){this.classList.remove('dragging');}
-function dropOnSlot(slot){
-    if(!draggedPiece) return;
-    if(slot.firstChild) document.getElementById('pieces-container').appendChild(slot.firstChild);
+function handleDragStart(e) { draggedPiece = this; this.classList.add('dragging'); e.dataTransfer.effectAllowed = 'move'; }
+function handleDragEnd() { this.classList.remove('dragging'); }
+function dropOnSlot(slot) {
+    if (!draggedPiece) return;
+    if (slot.firstChild) document.getElementById('pieces-container').appendChild(slot.firstChild);
     slot.appendChild(draggedPiece);
     playSnap();   // 🔊 صوت التك
     // وميض بصري سريع على الفتحة عند الالتصاق
     slot.classList.add('slot-snapped');
-    setTimeout(()=>slot.classList.remove('slot-snapped'), 220);
-    draggedPiece=null; checkCompletion();
+    setTimeout(() => slot.classList.remove('slot-snapped'), 220);
+    draggedPiece = null; checkCompletion();
 }
 
-let touchOffsetX,touchOffsetY;
-function handleTouchStart(e){
-    draggedPiece=this; const rect=this.getBoundingClientRect(),t=e.touches[0];
-    touchOffsetX=t.clientX-rect.left; touchOffsetY=t.clientY-rect.top;
-    this.classList.add('dragging'); this.style.position='fixed'; this.style.width=rect.width+'px'; this.style.zIndex='1000';
-    moveTouchPiece(t.clientX,t.clientY);
+let touchOffsetX, touchOffsetY;
+function handleTouchStart(e) {
+    draggedPiece = this; const rect = this.getBoundingClientRect(), t = e.touches[0];
+    touchOffsetX = t.clientX - rect.left; touchOffsetY = t.clientY - rect.top;
+    this.classList.add('dragging'); this.style.position = 'fixed'; this.style.width = rect.width + 'px'; this.style.zIndex = '1000';
+    moveTouchPiece(t.clientX, t.clientY);
 }
-function handleTouchMove(e){
-    e.preventDefault(); if(!draggedPiece) return; const t=e.touches[0]; moveTouchPiece(t.clientX,t.clientY);
-    document.querySelectorAll('.slot').forEach(s=>s.classList.remove('active'));
-    const el=document.elementFromPoint(t.clientX,t.clientY)?.closest('.slot');
-    if(el) el.classList.add('active');
+function handleTouchMove(e) {
+    e.preventDefault(); if (!draggedPiece) return; const t = e.touches[0]; moveTouchPiece(t.clientX, t.clientY);
+    document.querySelectorAll('.slot').forEach(s => s.classList.remove('active'));
+    const el = document.elementFromPoint(t.clientX, t.clientY)?.closest('.slot');
+    if (el) el.classList.add('active');
 }
-function handleTouchEnd(e){
-    if(!draggedPiece) return; const t=e.changedTouches[0];
+function handleTouchEnd(e) {
+    if (!draggedPiece) return; const t = e.changedTouches[0];
     draggedPiece.classList.remove('dragging');
-    ['position','width','top','left','zIndex'].forEach(p=>draggedPiece.style[p]='');
-    document.querySelectorAll('.slot').forEach(s=>s.classList.remove('active'));
-    const target=document.elementFromPoint(t.clientX,t.clientY)?.closest('.slot');
-    if(target){ if(target.firstChild) document.getElementById('pieces-container').appendChild(target.firstChild); target.appendChild(draggedPiece); }
+    ['position', 'width', 'top', 'left', 'zIndex'].forEach(p => draggedPiece.style[p] = '');
+    document.querySelectorAll('.slot').forEach(s => s.classList.remove('active'));
+    const target = document.elementFromPoint(t.clientX, t.clientY)?.closest('.slot');
+    if (target) { if (target.firstChild) document.getElementById('pieces-container').appendChild(target.firstChild); target.appendChild(draggedPiece); }
     else document.getElementById('pieces-container').appendChild(draggedPiece);
-    draggedPiece=null; checkCompletion();
+    draggedPiece = null; checkCompletion();
 }
-function moveTouchPiece(x,y){ draggedPiece.style.left=(x-touchOffsetX)+'px'; draggedPiece.style.top=(y-touchOffsetY)+'px'; }
+function moveTouchPiece(x, y) { draggedPiece.style.left = (x - touchOffsetX) + 'px'; draggedPiece.style.top = (y - touchOffsetY) + 'px'; }
 
 
+
+// ════════════════════════════════════════════════
+// نظام التغذية الراجعة النحوية المخصصة
+// ════════════════════════════════════════════════
+const GRAMMAR_RULES_DATA = {
+    singular: { name: "مفرد", nom: "مرفوع بالضمة", acc: "منصوب بالفتحة" },
+    plural_broken: { name: "جمع تكسير", nom: "مرفوع بالضمة", acc: "منصوب بالفتحة" },
+    dual: { name: "مثنى", nom: "مرفوع بالألف", acc: "منصوب بالياء" },
+    plural_masc: { name: "جمع مذكر سالم", nom: "مرفوع بالواو", acc: "منصوب بالياء" },
+    plural_fem: { name: "جمع مؤنث سالم", nom: "مرفوع بالضمة", acc: "منصوب بالكسرة نيابة عن الفتحة" },
+    five_names: { name: "من الأسماء الخمسة", nom: "مرفوع بالواو", acc: "منصوب بالألف" }
+};
+
+function detectGrammarType(word) {
+    if (!word) return 'singular';
+    if (word.match(/^(أبو|أخو|حمو|فو|ذو|أبا|أخا|حما|فا|ذا|أبي|أخي|حمي|في|ذي)/)) return 'five_names';
+    if (word.endsWith('انِ') || word.endsWith('ينِ')) return 'dual';
+    if (word.endsWith('ونَ') || word.endsWith('ينَ')) return 'plural_masc';
+    if (word.includes('اتُ') || word.includes('اتِ') || word.includes('اتٌ') || word.includes('اتٍ')) return 'plural_fem';
+    
+    // قائمة كلمات جمع التكسير الموجودة في بيانات اللعبة
+    const brokenPlurals = [
+        "العلماءُ", "العلماءَ", "الأصدقاءُ", "الأصدقاءَ", "النتائجُ", "النتائجَ", 
+        "الخلفاءُ", "الخلفاءَ", "إخوةٌ", "إخوةً", "أذكياءُ", "أذكياءَ", "أوفياءُ", "أوفياءَ"
+    ];
+    if (brokenPlurals.includes(word)) return 'plural_broken';
+
+    return 'singular';
+}
+
+function generateGrammarFeedback(isCorrect) {
+    const examples = getExamplesForCurrentLevel();
+    const ex = examples[currentExIndex];
+    if (!ex) return { title: "أحسنت!", msg: "إجابة صحيحة" };
+
+    let ismState = 'nom', khabarState = 'nom';
+    let ismPos = 'مبتدأ', khabarPos = 'خبر';
+
+    if (currentRuleLevel === 2) { 
+        ismState = 'acc'; ismPos = 'اسم إنَّ'; khabarPos = 'خبر إنَّ';
+    } else if (currentRuleLevel === 3) { 
+        khabarState = 'acc'; ismPos = 'اسم كانَ'; khabarPos = 'خبر كانَ';
+    } else if (currentRuleLevel === 4) {
+        const isInna = ["إنَّ", "أنَّ", "ليتَ", "لعلَّ", "كأنَّ", "لكنَّ"].some(s => ex.nasikh && ex.nasikh.includes(s));
+        if (isInna) { ismState = 'acc'; ismPos = 'اسم ' + ex.nasikh; khabarPos = 'خبر ' + ex.nasikh; }
+        else { khabarState = 'acc'; ismPos = 'اسم ' + ex.nasikh; khabarPos = 'خبر ' + ex.nasikh; }
+    }
+
+    const ismRule = GRAMMAR_RULES_DATA[detectGrammarType(ex.ism)];
+    const khabarRule = GRAMMAR_RULES_DATA[detectGrammarType(ex.khabar)];
+
+    if (isCorrect) {
+        const title = ["أحسنت! 🌟", "رائع! ✨", "ممتاز! 🏆", "صحيح! ✅"][Math.floor(Math.random()*4)];
+        const msg = `<div class="feedback-rule-box" style="text-align:right; font-size:0.95rem;">
+            📍 <b>${ismPos} (${ex.ism}):</b> ${ismRule[ismState]} لأنه ${ismRule.name}.<br>
+            📍 <b>${khabarPos} (${ex.khabar}):</b> ${khabarRule[khabarState]} لأنه ${khabarRule.name}.
+        </div>`;
+        const lines3D = [
+            { text: title, bold: true },
+            { text: `📍 ${ismPos} (${ex.ism}):`, bold: true },
+            { text: `${ismRule[ismState]} لأنه ${ismRule.name}.`, bold: false },
+            { text: `📍 ${khabarPos} (${ex.khabar}):`, bold: true },
+            { text: `${khabarRule[khabarState]} لأنه ${khabarRule.name}.`, bold: false }
+        ];
+        return { title, msg, lines3D };
+    } else {
+        const title = "انتبه! ⚠️";
+        const errorDesc = (ismState === 'acc') ? "حروف ناسخة تنصب اسم وترفع خبر." : (khabarState === 'acc') ? "أفعال ناسخة ترفع اسم وتنصب خبر." : "مبتدأ وخبر مرفوعان دائماً.";
+        const msg = `<div class="feedback-rule-box" style="text-align:right; font-size:0.95rem; border-right-color:#EF5350;">
+            ${errorDesc}<br>
+            تذكر: ${ismRule.name} ${ismRule[ismState]}، و${khabarRule.name} ${khabarRule[khabarState]}.
+        </div>`;
+        const lines3D = [
+            { text: title, bold: true },
+            { text: errorDesc, bold: false },
+            { text: `تذكر: ${ismRule.name} ${ismRule[ismState]}`, bold: true },
+            { text: `و${khabarRule.name} ${khabarRule[khabarState]}`, bold: true }
+        ];
+        return { title, msg, lines3D };
+    }
+}
 
 function handleSuccess(slots) {
     score += 10;
     updateHeader();
     playSuccess();
-    
-    puzzleSlots.forEach(s => {
-        // وميض أخضر مشع على الفتحة والقطعة
-        s.el.setAttribute('material', 'color', '#26A69A');
-        if(s.occupied) s.occupied.setAttribute('material', 'color', '#26A69A');
+
+    // حفظ التقدم فوراً في ذاكرة الطالب
+    updatePlayerProfile(playerName, playerAvatar, {
+        score, errors: errorCount, time: elapsedSeconds, coins: sessionCoins, level: currentLevel
     });
 
+    const feedback = generateGrammarFeedback(true);
+    
+    if (gameMode === 'VR') {
+        slots.forEach(s => {
+            // وميض أخضر مشع على الفتحة والقطعة (s هنا هو كائن من puzzleSlots)
+            if (s.el) s.el.setAttribute('material', 'color', '#26A69A');
+            if (s.occupied) s.occupied.setAttribute('material', 'color', '#26A69A');
+        });
+        // عرض التغذية الراجعة داخل المشهد ثلاثي الأبعاد
+        show3DFeedback(feedback.title, true, 10000, feedback.lines3D);
+    } else {
+        // في النمط العادي (slots هنا مصفوفة من DOM elements)
+        slots.forEach(s => {
+            s.classList.add('slot-snapped', 'success-slot');
+            const piece = s.querySelector('.piece');
+            if (piece) piece.style.borderColor = '#26A69A';
+        });
+    }
+
     // تأثير الاحتفال (Confetti + Particles)
-    try { confetti({particleCount: 150, spread: 70, origin: {y: 0.6}}); } catch(e) {}
-    
+    try { confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } }); } catch (e) { }
+
     // إظهار إضاءة فوز داخل المشهد
-    const light = document.createElement('a-light');
-    light.setAttribute('type', 'point');
-    light.setAttribute('color', '#FFD700');
-    light.setAttribute('intensity', '2');
-    light.setAttribute('position', '0 2 -2');
-    document.querySelector('a-scene').appendChild(light);
-    setTimeout(() => light.parentNode.removeChild(light), 1500);
+    if (gameMode === 'VR') {
+        const light = document.createElement('a-light');
+        light.setAttribute('type', 'point');
+        light.setAttribute('color', '#FFD700');
+        light.setAttribute('intensity', '2');
+        light.setAttribute('position', '0 2 -2');
+        document.querySelector('a-scene').appendChild(light);
+        setTimeout(() => { if (light.parentNode) light.parentNode.removeChild(light); }, 1500);
+    }
 
-    const ruleText = RULE_FEEDBACK[currentRuleLevel] || '';
 
-    // عرض التغذية الراجعة داخل المشهد ثلاثي الأبعاد (تعمل في VR وخارجه)
-    show3DFeedback('ممتاز! الكلمات صحيحة', true, 2200);
 
-    // الانتقال التلقائي بعد فترة قصيرة (لا حاجة للضغط على زر)
-    // عرض لوحة HTML أيضاً للوضع العادي لكن بدون الحاجة للضغط
-    document.getElementById('feedback-title').innerText = 'ممتاز! ✅';
-    document.getElementById('feedback-message').innerHTML = 'الكلمات صحيحة ومرتبة بضبط سليم.' +
-        (ruleText ? `<div class="feedback-rule-box">${ruleText}</div>` : '');
-    
+    // عرض لوحة HTML أيضاً للوضع العادي
+    document.getElementById('feedback-title').innerText = feedback.title;
+    document.getElementById('feedback-message').innerHTML = feedback.msg;
+
     // إخفاء زر التالي وعرض مؤشر الانتقال التلقائي
     const nextBtn = document.getElementById('next-btn');
+    const originalText = nextBtn.textContent;
     nextBtn.textContent = '⏳ جارٍ الانتقال...';
     nextBtn.disabled = true;
     document.getElementById('feedback').classList.remove('hidden');
 
-    // الانتقال التلقائي بعد 2.5 ثانية
+    // الانتقال التلقائي بعد مدة كافية للقراءة
+    const transitionDelay = gameMode === 'VR' ? 10000 : 5000;
     setTimeout(() => {
         document.getElementById('feedback').classList.add('hidden');
-        nextBtn.textContent = 'التالي ←';
+        nextBtn.textContent = originalText;
         nextBtn.disabled = false;
         goToNext();
-    }, 2500);
+    }, transitionDelay);
 }
 
 function handleError(slots) {
@@ -1226,46 +1440,60 @@ function handleError(slots) {
     updateHeader();
     playError();
 
-    puzzleSlots.forEach(s => {
-        s.el.setAttribute('material', 'color', '#EF5350'); // لون الخطأ أحمر
-    });
+    // عرض تغذية راجعة تعليمية عند الخطأ
+    const feedback = generateGrammarFeedback(false);
+    document.getElementById('feedback-title').innerText = feedback.title;
+    document.getElementById('feedback-message').innerHTML = feedback.msg;
+    const fbPanel = document.getElementById('feedback');
+    const nextBtn = document.getElementById('next-btn');
+    
+    fbPanel.classList.remove('hidden');
+    nextBtn.classList.add('hidden'); // إخفاء زر التالي في حالة الخطأ
 
+    if (gameMode === 'VR') {
+        show3DFeedback(feedback.title, false, 11200, feedback.lines3D);
+    }
+
+    const resetDelay = gameMode === 'VR' ? 11200 : 5600;
     setTimeout(() => {
-        // إرجاع القطع لمواقعها الأصلية وفك قفلها
-        puzzleSlots.forEach(s => {
-            if (s.occupied) {
-                const p = s.occupied;
-                p.dataset.locked = 'false'; // فك القفل للمحاولة مجدداً
-                
-                // إعادة التبعية للمشهد العام قبل التحريك
-                document.getElementById('puzzle-world').object3D.attach(p.object3D);
-
-                const hX = p.dataset.homeX;
-                const hY = p.dataset.homeY;
-                const hZ = p.dataset.homeZ;
-                
-                gsap.to(p.object3D.position, {x: hX, y: hY, z: hZ, duration: 0.5});
-                gsap.to(p.object3D.rotation, {x: 0, y: 0, z: 0, duration: 0.5});
-                
-                if (p.animationInstance) p.animationInstance.resume();
+        fbPanel.classList.add('hidden');
+        nextBtn.classList.remove('hidden');
+        
+        slots.forEach(s => {
+            if (gameMode === 'VR') {
+                if (s.occupied) {
+                    const p = s.occupied;
+                    p.dataset.locked = 'false';
+                    document.getElementById('puzzle-world').object3D.attach(p.object3D);
+                    const hX = p.dataset.homeX, hY = p.dataset.homeY, hZ = p.dataset.homeZ;
+                    gsap.to(p.object3D.position, { x: hX, y: hY, z: hZ, duration: 0.5 });
+                    if (p.animationInstance) p.animationInstance.resume();
+                }
+                s.occupied = null;
+                if (s.el) s.el.setAttribute('material', { color: '#1A237E', opacity: 0.5 });
+            } else {
+                s.classList.remove('error-slot');
+                if (s.firstChild) {
+                    const piece = s.firstChild;
+                    piece.style.borderColor = '';
+                    document.getElementById('pieces-container').appendChild(piece);
+                }
             }
-            s.occupied = null;
-            s.el.setAttribute('material', {color: '#1A237E', opacity: 0.5});
         });
-    }, 1200);
+    }, resetDelay);
 }
 
 // ════════════════════════════════════════════════
 // التنقل — مع شاشة إكمال المستوى
 // ════════════════════════════════════════════════
-function goToNext(){
+function goToNext() {
     const examples = getExamplesForCurrentLevel();
     const examplesCount = examples.length;
 
     currentExIndex++;
-    if(currentExIndex>=examplesCount){
+    if (currentExIndex >= examplesCount) {
         // أنهى المستوى الحالي
-        currentExIndex=0;
+        currentExIndex = 0;
         showLevelComplete(currentLevel); // عرض شاشة الإنجاز قبل الانتقال
     } else {
         loadExample();
@@ -1275,21 +1503,21 @@ function goToNext(){
 // ════════════════════════════════════════════════
 // شاشة إكمال المستوى ✨
 // ════════════════════════════════════════════════
-function showLevelComplete(level){
+function showLevelComplete(level) {
     stopTimer();
 
     const data = LEVEL_COMPLETE_DATA[level];
-    document.getElementById('lc-emoji').textContent    = data.emoji;
-    document.getElementById('lc-title').textContent    = data.title;
+    document.getElementById('lc-emoji').textContent = data.emoji;
+    document.getElementById('lc-title').textContent = data.title;
     document.getElementById('lc-subtitle').textContent = `جيد جداً يا ${playerName}!`;
     document.getElementById('lc-motivation').innerHTML = getMotivationMessage(level, errorCount);
-    document.getElementById('lc-level').textContent    = level;
-    document.getElementById('lc-score').textContent    = score;
-    document.getElementById('lc-errors').textContent   = errorCount;
-    document.getElementById('lc-time').textContent     = formatTime(elapsedSeconds);
+    document.getElementById('lc-level').textContent = level;
+    document.getElementById('lc-score').textContent = score;
+    document.getElementById('lc-errors').textContent = errorCount;
+    document.getElementById('lc-time').textContent = formatTime(elapsedSeconds);
 
     const nlp = document.getElementById('next-level-preview');
-    if(level < TOTAL_LEVELS){
+    if (level < TOTAL_LEVELS) {
         document.getElementById('nlp-icon').textContent = data.nextIcon;
         document.getElementById('nlp-text').textContent = `المستوى القادم: ${data.nextName}`;
         nlp.classList.remove('hidden');
@@ -1309,16 +1537,16 @@ function showLevelComplete(level){
         // الوضع العادي: عرض شاشة إكمال المستوى كالمعتاد
         const lc = document.getElementById('level-complete-screen');
         lc.classList.remove('hidden');
-        gsap.from('#level-complete-screen .overlay-content',{scale:0.65,opacity:0,duration:0.55,ease:'back.out(1.5)'});
+        gsap.from('#level-complete-screen .overlay-content', { scale: 0.65, opacity: 0, duration: 0.55, ease: 'back.out(1.5)' });
     }
 }
 
 // المتابعة بعد إكمال المستوى
-function onContinue(){
+function onContinue() {
     document.getElementById('level-complete-screen').classList.add('hidden');
     remove3DLevelComplete();
     currentLevel++;
-    if(currentLevel>TOTAL_LEVELS){
+    if (currentLevel > TOTAL_LEVELS) {
         // في VR، نخرج من VR أولاً قبل عرض شاشة النهاية
         if (isInVRMode()) {
             const scene = document.querySelector('a-scene');
@@ -1334,13 +1562,13 @@ function onContinue(){
 // ════════════════════════════════════════════════
 // منطق الخروج
 // ════════════════════════════════════════════════
-function requestExit(context){
+function requestExit(context) {
     exitContext = context;
     // رسالة التحذير تختلف حسب السياق
     let msg = '';
-    if(context === 'game'){
+    if (context === 'game') {
         const completedLevels = currentLevel - 1;
-        if(completedLevels === 0){
+        if (completedLevels === 0) {
             msg = `⚠️ لم تُكمل أي مستوى بعد. <span class="warning-high">ستفقد جميع النقاط (${score} نقطة) عند الخروج.</span>`;
         } else {
             msg = `أكملت ${completedLevels} مستوى بنجاح. <span class="warning-med">ستفقد النقاط المكتسبة في المستوى الحالي (${score} نقطة) ولن تُحفظ النتيجة النهائية.</span>`;
@@ -1351,49 +1579,49 @@ function requestExit(context){
     }
     document.getElementById('exit-warning-msg').innerHTML = msg;
     document.getElementById('exit-warning-screen').classList.remove('hidden');
-    gsap.from('#exit-warning-screen .overlay-content',{scale:0.8,opacity:0,duration:0.3,ease:'back.out(1.3)'});
+    gsap.from('#exit-warning-screen .overlay-content', { scale: 0.8, opacity: 0, duration: 0.3, ease: 'back.out(1.3)' });
 }
 
-function confirmExit(){
+function confirmExit() {
     // إغلاق التحذير وجميع الشاشات المفتوحة
-    ['exit-warning-screen','level-complete-screen','feedback'].forEach(id=>
+    ['exit-warning-screen', 'level-complete-screen', 'feedback'].forEach(id =>
         document.getElementById(id).classList.add('hidden'));
     stopTimer();
     goToRegister();
 }
 
-function cancelExit(){
+function cancelExit() {
     document.getElementById('exit-warning-screen').classList.add('hidden');
     // إن كنا في شاشة إكمال المستوى نُعيدها
-    if(exitContext==='level-complete'){
+    if (exitContext === 'level-complete') {
         document.getElementById('level-complete-screen').classList.remove('hidden');
     } else {
         startTimer(); // استئناف المؤقت
     }
 }
 
-function goToRegister(){
-    ['end-screen','leaderboard-screen','level-complete-screen','exit-warning-screen'].forEach(id=>
+function goToRegister() {
+    ['end-screen', 'leaderboard-screen', 'level-complete-screen', 'exit-warning-screen'].forEach(id =>
         document.getElementById(id).classList.add('hidden'));
     const reg = document.getElementById('register-screen');
-    reg.style.opacity='1'; reg.classList.remove('hidden');
+    reg.style.opacity = '1'; reg.classList.remove('hidden');
     onNameInput(); // تحديث بيانات اللاعب العائد
 }
 
 // ════════════════════════════════════════════════
 // إنهاء اللعبة + حفظ النتائج
 // ════════════════════════════════════════════════
-function finishGame(){
+function finishGame() {
     stopTimer();
     sessionCoins = calcCoins(score, errorCount, elapsedSeconds);
 
-    const lbEntry = {name:playerName,avatar:playerAvatar,score,errors:errorCount,time:elapsedSeconds,date:new Date().toLocaleDateString('ar-EG')};
+    const lbEntry = { name: playerName, avatar: playerAvatar, score, errors: errorCount, time: elapsedSeconds, date: new Date().toLocaleDateString('ar-EG') };
     saveLbEntry(lbEntry);
     const rank = getPlayerRank(lbEntry);
 
-    const profile = updatePlayerProfile(playerName, playerAvatar, {score,errors:errorCount,time:elapsedSeconds,coins:sessionCoins,rank});
-    const newBadgeIds = calcNewBadges({score,errors:errorCount,time:elapsedSeconds,rank}, profile);
-    if(newBadgeIds.length) addBadgesToProfile(playerName, newBadgeIds);
+    const profile = updatePlayerProfile(playerName, playerAvatar, { score, errors: errorCount, time: elapsedSeconds, coins: sessionCoins, rank });
+    const newBadgeIds = calcNewBadges({ score, errors: errorCount, time: elapsedSeconds, rank }, profile);
+    if (newBadgeIds.length) addBadgesToProfile(playerName, newBadgeIds);
 
     // تحديث رصيد العملات في الهيدر
     document.getElementById('coins-display').textContent = profile.totalCoins;
@@ -1404,100 +1632,100 @@ function finishGame(){
 // ════════════════════════════════════════════════
 // شاشة النهاية
 // ════════════════════════════════════════════════
-function renderEndScreen(rank, profile, newBadgeIds){
-    document.getElementById('end-avatar').textContent   = playerAvatar;
-    document.getElementById('end-name').textContent     = `أحسنت يا ${playerName}!`;
-    document.getElementById('final-score').textContent  = score;
-    document.getElementById('final-coins').textContent  = `+${sessionCoins}`;
+function renderEndScreen(rank, profile, newBadgeIds) {
+    document.getElementById('end-avatar').textContent = playerAvatar;
+    document.getElementById('end-name').textContent = `أحسنت يا ${playerName}!`;
+    document.getElementById('final-score').textContent = score;
+    document.getElementById('final-coins').textContent = `+${sessionCoins}`;
     document.getElementById('final-errors').textContent = errorCount;
-    document.getElementById('final-time').textContent   = formatTime(elapsedSeconds);
-    document.getElementById('final-rank').textContent   = `#${rank}`;
-    document.getElementById('total-coins').textContent  = profile.totalCoins;
+    document.getElementById('final-time').textContent = formatTime(elapsedSeconds);
+    document.getElementById('final-rank').textContent = `#${rank}`;
+    document.getElementById('total-coins').textContent = profile.totalCoins;
 
     // النجوم
     const stars = calcStars(errorCount);
     const sc = document.getElementById('star-rating');
-    sc.innerHTML='';
-    for(let i=1;i<=3;i++){
-        const s=document.createElement('span');
-        s.className='star'+(i<=stars?' lit':''); s.textContent='⭐'; sc.appendChild(s);
+    sc.innerHTML = '';
+    for (let i = 1; i <= 3; i++) {
+        const s = document.createElement('span');
+        s.className = 'star' + (i <= stars ? ' lit' : ''); s.textContent = '⭐'; sc.appendChild(s);
     }
-    gsap.from('.star.lit',{scale:0,duration:0.4,stagger:0.15,ease:'back.out(2)',delay:0.3});
+    gsap.from('.star.lit', { scale: 0, duration: 0.4, stagger: 0.15, ease: 'back.out(2)', delay: 0.3 });
 
     // شارات جديدة
-    const nbSec=document.getElementById('new-badges-section');
-    if(newBadgeIds.length){
+    const nbSec = document.getElementById('new-badges-section');
+    if (newBadgeIds.length) {
         nbSec.classList.remove('hidden');
-        const nbList=document.getElementById('new-badges-list'); nbList.innerHTML='';
-        newBadgeIds.forEach(id=>{
-            const b=BADGES.find(x=>x.id===id); if(!b) return;
-            const chip=document.createElement('div'); chip.className='badge-chip new-badge';
-            chip.innerHTML=`<span class="badge-icon">${b.icon}</span><span class="badge-name">${b.name}</span><span class="badge-desc">${b.desc}</span>`;
+        const nbList = document.getElementById('new-badges-list'); nbList.innerHTML = '';
+        newBadgeIds.forEach(id => {
+            const b = BADGES.find(x => x.id === id); if (!b) return;
+            const chip = document.createElement('div'); chip.className = 'badge-chip new-badge';
+            chip.innerHTML = `<span class="badge-icon">${b.icon}</span><span class="badge-name">${b.name}</span><span class="badge-desc">${b.desc}</span>`;
             nbList.appendChild(chip);
         });
-        gsap.from('.new-badge',{scale:0,duration:0.5,stagger:0.12,ease:'back.out(2)',delay:0.6});
+        gsap.from('.new-badge', { scale: 0, duration: 0.5, stagger: 0.12, ease: 'back.out(2)', delay: 0.6 });
     } else nbSec.classList.add('hidden');
 
     // كل الشارات
-    const allList=document.getElementById('all-badges-list'); allList.innerHTML='';
-    const earnedIds=profile.badges||[];
-    BADGES.forEach(b=>{
-        const earned=earnedIds.includes(b.id);
-        const chip=document.createElement('div'); chip.className='badge-chip'+(earned?'':' locked'); chip.title=b.desc;
-        chip.innerHTML=`<span class="badge-icon">${b.icon}</span><span class="badge-name">${b.name}</span>`;
+    const allList = document.getElementById('all-badges-list'); allList.innerHTML = '';
+    const earnedIds = profile.badges || [];
+    BADGES.forEach(b => {
+        const earned = earnedIds.includes(b.id);
+        const chip = document.createElement('div'); chip.className = 'badge-chip' + (earned ? '' : ' locked'); chip.title = b.desc;
+        chip.innerHTML = `<span class="badge-icon">${b.icon}</span><span class="badge-name">${b.name}</span>`;
         allList.appendChild(chip);
     });
 
     document.getElementById('end-screen').classList.remove('hidden');
-    gsap.from('#end-screen .overlay-content',{scale:0.65,opacity:0,duration:0.55,ease:'back.out(1.5)'});
-    if(errorCount===0) confetti({particleCount:250,spread:100,origin:{y:0.5}});
+    gsap.from('#end-screen .overlay-content', { scale: 0.65, opacity: 0, duration: 0.55, ease: 'back.out(1.5)' });
+    if (errorCount === 0) confetti({ particleCount: 250, spread: 100, origin: { y: 0.5 } });
 }
 
 // ════════════════════════════════════════════════
 // حساب الشارات الجديدة
 // ════════════════════════════════════════════════
-function calcNewBadges(sessionData, profile){
-    const already=profile.badges||[];
-    return BADGES.filter(b=>!already.includes(b.id)&&b.check(sessionData,profile)).map(b=>b.id);
+function calcNewBadges(sessionData, profile) {
+    const already = profile.badges || [];
+    return BADGES.filter(b => !already.includes(b.id) && b.check(sessionData, profile)).map(b => b.id);
 }
 
 // ════════════════════════════════════════════════
 // LocalStorage: بروفايلات اللاعبين
 // ════════════════════════════════════════════════
-function getAllProfiles(){ try{return JSON.parse(localStorage.getItem(LS_PL_KEY))||{};}catch{return{};} }
-function saveAllProfiles(p){ localStorage.setItem(LS_PL_KEY,JSON.stringify(p)); }
-function getPlayerProfile(name){ return getAllProfiles()[name]||null; }
+function getAllProfiles() { try { return JSON.parse(localStorage.getItem(LS_PL_KEY)) || {}; } catch { return {}; } }
+function saveAllProfiles(p) { localStorage.setItem(LS_PL_KEY, JSON.stringify(p)); }
+function getPlayerProfile(name) { return getAllProfiles()[name] || null; }
 
-function updatePlayerProfile(name, avatar, sessionData){
-    const profiles=getAllProfiles();
-    const prev=profiles[name]||{name,avatar,totalGames:0,bestScore:0,bestTime:Infinity,totalCoins:0,badges:[],perfectStreak:0,history:[]};
-    prev.avatar=avatar; prev.totalGames+=1; prev.totalCoins+=sessionData.coins;
-    if(sessionData.score>prev.bestScore) prev.bestScore=sessionData.score;
-    if(sessionData.time<prev.bestTime)   prev.bestTime=sessionData.time;
-    prev.perfectStreak=sessionData.errors===0?(prev.perfectStreak||0)+1:0;
-    prev.history.push({score:sessionData.score,errors:sessionData.errors,time:sessionData.time,coins:sessionData.coins,rank:sessionData.rank,date:new Date().toLocaleDateString('ar-EG')});
-    profiles[name]=prev; saveAllProfiles(profiles); return prev;
+function updatePlayerProfile(name, avatar, sessionData) {
+    const profiles = getAllProfiles();
+    const prev = profiles[name] || { name, avatar, totalGames: 0, bestScore: 0, bestTime: Infinity, totalCoins: 0, badges: [], perfectStreak: 0, history: [] };
+    prev.avatar = avatar; prev.totalGames += 1; prev.totalCoins += sessionData.coins;
+    if (sessionData.score > prev.bestScore) prev.bestScore = sessionData.score;
+    if (sessionData.time < prev.bestTime) prev.bestTime = sessionData.time;
+    prev.perfectStreak = sessionData.errors === 0 ? (prev.perfectStreak || 0) + 1 : 0;
+    prev.history.push({ score: sessionData.score, errors: sessionData.errors, time: sessionData.time, coins: sessionData.coins, rank: sessionData.rank, date: new Date().toLocaleDateString('ar-EG') });
+    profiles[name] = prev; saveAllProfiles(profiles); return prev;
 }
 
-function addBadgesToProfile(name, badgeIds){
-    const profiles=getAllProfiles(); if(!profiles[name]) return;
-    profiles[name].badges=[...new Set([...(profiles[name].badges||[]),...badgeIds])];
+function addBadgesToProfile(name, badgeIds) {
+    const profiles = getAllProfiles(); if (!profiles[name]) return;
+    profiles[name].badges = [...new Set([...(profiles[name].badges || []), ...badgeIds])];
     saveAllProfiles(profiles);
 }
 
 // ════════════════════════════════════════════════
 // LocalStorage: المتصدرون
 // ════════════════════════════════════════════════
-function getLeaderboard(){ try{return JSON.parse(localStorage.getItem(LS_LB_KEY))||[];}catch{return[];} }
-function saveLbEntry(entry){
-    const lb=getLeaderboard(); lb.push(entry);
-    lb.sort((a,b)=>a.errors-b.errors||a.time-b.time||b.score-a.score);
-    localStorage.setItem(LS_LB_KEY,JSON.stringify(lb));
+function getLeaderboard() { try { return JSON.parse(localStorage.getItem(LS_LB_KEY)) || []; } catch { return []; } }
+function saveLbEntry(entry) {
+    const lb = getLeaderboard(); lb.push(entry);
+    lb.sort((a, b) => a.errors - b.errors || a.time - b.time || b.score - a.score);
+    localStorage.setItem(LS_LB_KEY, JSON.stringify(lb));
 }
-function getPlayerRank(entry){
-    const lb=getLeaderboard();
-    for(let i=0;i<lb.length;i++){
-        if(lb[i].name===entry.name&&lb[i].score===entry.score&&lb[i].errors===entry.errors&&lb[i].time===entry.time) return i+1;
+function getPlayerRank(entry) {
+    const lb = getLeaderboard();
+    for (let i = 0; i < lb.length; i++) {
+        if (lb[i].name === entry.name && lb[i].score === entry.score && lb[i].errors === entry.errors && lb[i].time === entry.time) return i + 1;
     }
     return lb.length;
 }
@@ -1505,58 +1733,143 @@ function getPlayerRank(entry){
 // ════════════════════════════════════════════════
 // عرض قائمة الإنجاز
 // ════════════════════════════════════════════════
-function showLeaderboard(){
-    const lb=getLeaderboard();
-    const list=document.getElementById('leaderboard-list');
-    list.innerHTML='';
+function showLeaderboard() {
+    const lb = getLeaderboard();
+    const list = document.getElementById('leaderboard-list');
+    list.innerHTML = '';
 
-    if(!lb.length){
-        list.innerHTML=`<div class="lb-empty">لا توجد نتائج بعد.<br>كن أول من يُكمل اللعبة! 🚀</div>`;
+    if (!lb.length) {
+        list.innerHTML = `<div class="lb-empty">لا توجد نتائج بعد.<br>كن أول من يُكمل اللعبة! 🚀</div>`;
     } else {
-        const icons=['🥇','🥈','🥉'];
-        const seen=new Set();
-        const unique=lb.filter(e=>{if(seen.has(e.name))return false;seen.add(e.name);return true;});
-        unique.forEach((entry,i)=>{
-            const profile=getPlayerProfile(entry.name);
-            const badgeIcons=(profile?.badges||[]).slice(0,4).map(id=>{const b=BADGES.find(x=>x.id===id);return b?`<span class="lb-badge-icon">${b.icon}</span>`:''}).join('');
-            const row=document.createElement('div');
-            row.className=`lb-row rank-${i+1}`;
-            row.innerHTML=`
-                <div class="lb-rank">${icons[i]||(i+1)}</div>
+        const icons = ['🥇', '🥈', '🥉'];
+        const seen = new Set();
+        const unique = lb.filter(e => { if (seen.has(e.name)) return false; seen.add(e.name); return true; });
+
+        unique.forEach((entry, i) => {
+            const row = document.createElement('div');
+            row.className = `lb-row rank-${i + 1}`;
+            row.innerHTML = `
+                <div class="lb-rank">${icons[i] || (i + 1)}</div>
                 <div class="lb-avatar">${entry.avatar}</div>
                 <div class="lb-info">
                     <div class="lb-player-name">${entry.name}</div>
-                    <div class="lb-player-badges">${badgeIcons}</div>
                     <div class="lb-meta">${entry.date}</div>
                 </div>
                 <div class="lb-stats">
                     <div class="lb-score-val">${entry.score} نقطة</div>
-                    <div class="lb-coins-val">🪙 ${profile?.totalCoins||0}</div>
                     <div class="lb-err-time">❌ ${entry.errors} | ⏱ ${formatTime(entry.time)}</div>
                 </div>`;
             list.appendChild(row);
         });
     }
     document.getElementById('leaderboard-screen').classList.remove('hidden');
-    gsap.from('#leaderboard-screen .overlay-content',{scale:0.85,opacity:0,duration:0.4,ease:'back.out(1.3)'});
+    gsap.from('#leaderboard-screen .overlay-content', { scale: 0.85, opacity: 0, duration: 0.4, ease: 'back.out(1.3)' });
 }
 
 // ════════════════════════════════════════════════
-// إعادة اللعب
+// حماية لوحة المعلم بكلمة مرور
 // ════════════════════════════════════════════════
-function onRestartClick(){
-    const end=document.getElementById('end-screen');
-    gsap.to(end,{opacity:0,duration:0.3,onComplete:()=>{ end.classList.add('hidden'); end.style.opacity='1'; goToRegister(); }});
+function requestTeacherAccess() {
+    const screen = document.getElementById('teacher-login-screen');
+    const input = document.getElementById('teacher-password-input');
+    const error = document.getElementById('password-error');
+    
+    input.value = '';
+    error.classList.add('hidden');
+    screen.classList.remove('hidden');
+    input.focus();
+    
+    gsap.from('#teacher-login-screen .overlay-content', { scale: 0.8, opacity: 0, duration: 0.4, ease: 'back.out(1.5)' });
+}
+
+function submitTeacherPassword() {
+    const input = document.getElementById('teacher-password-input');
+    const error = document.getElementById('password-error');
+    
+    if (input.value === '123') {
+        document.getElementById('teacher-login-screen').classList.add('hidden');
+        showTeacherDashboard();
+    } else {
+        error.classList.remove('hidden');
+        input.classList.add('shake');
+        setTimeout(() => input.classList.remove('shake'), 500);
+        input.value = '';
+        input.focus();
+    }
+}
+
+function cancelTeacherPassword() {
+    document.getElementById('teacher-login-screen').classList.add('hidden');
 }
 
 // ════════════════════════════════════════════════
-// خلط المصفوفة
+// لوحة تحكم المعلم والتحليلات
 // ════════════════════════════════════════════════
-function shuffle(arr){
-    const a=[...arr];
-    for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+let performanceChart = null;
+
+function showTeacherDashboard() {
+    const profiles = getAllProfiles();
+    const students = Object.values(profiles);
+    const listBody = document.getElementById('students-list-body');
+    listBody.innerHTML = '';
+
+    let totalScore = 0;
+    let totalErrors = 0;
+    const levelStats = { 1: { sum: 0, count: 0 }, 2: { sum: 0, count: 0 }, 3: { sum: 0, count: 0 }, 4: { sum: 0, count: 0 } };
+
+    students.forEach(s => {
+        totalScore += s.bestScore || 0;
+        let sErrors = 0;
+        s.history.forEach(h => {
+            sErrors += h.errors;
+            if (h.level && levelStats[h.level]) {
+                levelStats[h.level].sum += h.score;
+                levelStats[h.level].count++;
+            }
+        });
+        totalErrors += sErrors / (s.totalGames || 1);
+
+        const row = document.createElement('tr');
+        const last = s.history[s.history.length - 1] || {};
+        row.innerHTML = `<td>${s.avatar} ${s.name}</td><td>${last.level || 'جديد'}</td><td>${s.bestScore}</td><td>${last.errors || 0}</td><td>${formatTime(last.time || 0)}</td><td>${s.totalCoins}</td><td>${last.date || '-'}</td>`;
+        listBody.appendChild(row);
+    });
+
+    document.getElementById('total-students-count').textContent = students.length;
+    document.getElementById('avg-score-val').textContent = students.length ? Math.round(totalScore / students.length) : 0;
+    document.getElementById('avg-errors-val').textContent = students.length ? (totalErrors / students.length).toFixed(1) : 0;
+
+    renderPerformanceChart(levelStats);
+    document.getElementById('teacher-dashboard-screen').classList.remove('hidden');
+}
+
+function renderPerformanceChart(stats) {
+    const ctx = document.getElementById('performance-chart').getContext('2d');
+    const data = [1, 2, 3, 4].map(l => stats[l].count ? Math.round(stats[l].sum / stats[l].count) : 0);
+    if (performanceChart) performanceChart.destroy();
+    performanceChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['المستوى 1', 'المستوى 2', 'المستوى 3', 'المستوى 4'],
+            datasets: [{ label: 'متوسط الأداء', data: data, borderColor: '#5C6BC0', backgroundColor: 'rgba(92, 107, 192, 0.1)', borderWidth: 3, tension: 0.4, fill: true }]
+        }
+    });
+}
+
+function clearAllData() { if (confirm('🗑 مسح جميع البيانات؟')) { localStorage.clear(); location.reload(); } }
+
+// ════════════════════════════════════════════════
+// إدارة اللعبة
+// ════════════════════════════════════════════════
+function goToRegister() { location.reload(); }
+
+function onRestartClick() {
+    const end = document.getElementById('end-screen');
+    gsap.to(end, { opacity: 0, duration: 0.3, onComplete: () => { end.classList.add('hidden'); end.style.opacity = '1'; goToRegister(); } });
+}
+
+function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; }
     return a;
 }
-// المستمعات العالمية يتم تعريفها مرة واحدة فقط لمحرك اللعب
-window.addEventListener('mousemove', on3DMouseMove);
-window.addEventListener('mouseup', on3DDragEnd);

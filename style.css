@@ -7,6 +7,13 @@
 .intro-rule-box strong { color: #F57F17; }
 .intro-task-box strong { color: #1565C0; }
 
+#start-level-btn {
+    display: block !important;
+    margin: 20px auto 0 !important;
+    min-width: 220px;
+    z-index: 100;
+}
+
 .designer-credit {
     font-size: 1.1rem;
     color: #5C6BC0;
@@ -14,6 +21,117 @@
     margin-top: -10px;
     margin-bottom: 15px;
 }
+
+.designer-name-header { font-size: 0.9rem; color: #FFF; opacity: 0.9; font-weight: 600; margin-top: -5px; }
+.btn-teacher { background: #546E7A; color: white; border: none; padding: 10px 18px; border-radius: 10px; cursor: pointer; font-family: inherit; font-weight: 700; transition: 0.3s; }
+.btn-teacher:hover { background: #37474F; transform: translateY(-2px); }
+.secondary-btns-row { display: flex; gap: 10px; margin-top: 10px; width: 100%; justify-content: center; }
+
+/* لوحة المعلم */
+.teacher-content { max-width: 900px !important; }
+.analytics-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px; }
+.summary-card { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid #546E7A; }
+.card-val { display: block; font-size: 1.8rem; font-weight: 800; color: #546E7A; }
+.card-label { font-size: 0.9rem; color: #78909C; }
+
+.analytics-charts { margin-bottom: 25px; }
+.chart-card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.chart-card h3 { margin-bottom: 15px; color: #546E7A; font-size: 1.1rem; text-align: center; }
+#performance-chart { max-height: 300px; width: 100%; }
+
+.dashboard-table-wrap { background: white; border-radius: 15px; overflow-x: auto; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+#students-table { width: 100%; border-collapse: collapse; text-align: right; }
+#students-table th { background: #F5F7F9; color: #546E7A; padding: 15px; font-weight: 800; border-bottom: 2px solid #EEE; }
+#students-table td { padding: 12px 15px; border-bottom: 1px solid #F0F0F0; font-size: 0.95rem; }
+#students-table tr:hover { background: #FAFAFA; }
+.btn-danger { background: #EF5350; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: 700; }
+
+/* شاشة اختيار النمط */
+.mode-content { max-width: 700px !important; }
+.mode-options { display: flex; gap: 20px; margin: 30px 0; justify-content: center; }
+.mode-card { background: white; border: 3px solid #E0E0E0; border-radius: 20px; padding: 25px; width: 250px; cursor: pointer; transition: 0.3s; position: relative; overflow: hidden; }
+.mode-card:hover { transform: translateY(-10px); border-color: #5C6BC0; box-shadow: 0 15px 30px rgba(92, 107, 192, 0.2); }
+.mode-card.selected { border-color: #5C6BC0; background: #F5F7FF; }
+.mode-icon { font-size: 3.5rem; margin-bottom: 15px; }
+.mode-badge { font-size: 0.75rem; background: #EEE; padding: 4px 10px; border-radius: 20px; color: #666; margin-top: 10px; display: inline-block; }
+
+/* بروفايل الواجهة الأساسية */
+.main-profile-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    border: 2px solid #e0e4ff;
+    text-align: right;
+    box-shadow: 0 4px 15px rgba(92, 107, 192, 0.05);
+}
+.main-avatar {
+    font-size: 40px;
+    width: 65px;
+    height: 65px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 3px solid #fff;
+}
+.welcome-msg {
+    display: block;
+    font-size: 0.85rem;
+    color: #7986cb;
+    font-weight: 700;
+}
+.main-user-info h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #1a237e;
+    font-weight: 900;
+}
+
+/* بروفايل شاشة التقديم */
+.level-player-preview {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(26, 35, 126, 0.05);
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    color: #1a237e;
+    border: 1px solid rgba(26, 35, 126, 0.1);
+}
+.level-player-preview span:first-child {
+    font-size: 1.5rem;
+}
+
+/* النمط الكلاسيكي - قطع الأحجية */
+#standard-game-zone { padding: 20px; background: rgba(255,255,255,0.9); border-radius: 30px; margin: 20px auto; max-width: 900px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+#puzzle-container { display: flex; flex-direction: column; gap: 40px; align-items: center; min-height: 400px; padding: 40px; }
+.slots-row, .pieces-row { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; min-height: 100px; width: 100%; padding: 20px; }
+
+.slot { width: 160px; height: 70px; background: #E0E0E0; border: 3px dashed #BDBDBD; border-radius: 15px; position: relative; transition: 0.3s; }
+.slot.active { background: #BBDEFB; border-color: #2196F3; transform: scale(1.05); }
+.slot-snapped { background: #A5D6A7 !important; border-style: solid; border-color: #4CAF50 !important; }
+
+.piece { 
+    padding: 15px 25px; background: white; border-radius: 15px; cursor: grab; font-size: 1.4rem; font-weight: 800;
+    box-shadow: 0 6px 0 #DDD, 0 10px 20px rgba(0,0,0,0.1); border: 2px solid #EEE; transition: 0.2s;
+    user-select: none; color: #1A237E; display: flex; align-items: center; justify-content: center; min-width: 120px;
+}
+.piece:active { cursor: grabbing; transform: translateY(4px); box-shadow: 0 2px 0 #DDD, 0 4px 10px rgba(0,0,0,0.1); }
+.piece.dragging { opacity: 0.5; transform: scale(1.1); }
+
+/* ألوان جميلة للقطع حسب النوع */
+.piece[data-type="MUBTADA"], .piece[data-type="ISM"] { border-left: 8px solid #5C6BC0; background: #F0F4FF; }
+.piece[data-type="KHABAR"] { border-left: 8px solid #FFA726; background: #FFF3E0; }
+.piece[data-type="NASIKH"] { border-left: 8px solid #26A69A; background: #E0F2F1; }
 
 :root {
 
@@ -147,18 +265,18 @@ a-scene {
 /* فتحة واحدة من 2 */
 .slot.puzzle-slot.puzzle-2-0 {
     clip-path: polygon(
-        0% 0%, 60% 0%, 60% 25%, 65% 22%, 72% 22%, 77% 25%, 80% 30%, 80% 40%,
-        80% 50%, 80% 60%, 77% 65%, 72% 68%, 65% 68%, 60% 65%, 60% 55%,
-        60% 100%, 0% 100%
+        0% 0%, 90% 0%, 90% 25%, 93% 22%, 97% 22%, 100% 25%, 100% 30%, 100% 40%,
+        100% 50%, 100% 60%, 100% 65%, 97% 68%, 93% 68%, 90% 65%, 90% 55%,
+        90% 100%, 0% 100%
     );
     width: 220px;
     margin-left: -10px;
 }
 .slot.puzzle-slot.puzzle-2-1 {
     clip-path: polygon(
-        40% 0%, 100% 0%, 100% 100%, 40% 100%, 40% 65%,
-        35% 68%, 28% 68%, 23% 65%, 20% 60%, 20% 50%,
-        20% 40%, 23% 35%, 28% 22%, 35% 22%, 40% 25%
+        10% 0%, 100% 0%, 100% 100%, 10% 100%, 10% 65%,
+        7% 68%, 3% 68%, 0% 65%, 0% 60%, 0% 50%,
+        0% 40%, 0% 30%, 3% 22%, 7% 22%, 10% 25%
     );
     width: 220px;
     margin-right: -10px;
@@ -167,9 +285,9 @@ a-scene {
 /* فتحة 1 من 3 */
 .slot.puzzle-slot.puzzle-3-0 {
     clip-path: polygon(
-        0% 0%, 65% 0%, 65% 25%, 70% 22%, 77% 22%, 82% 25%, 85% 30%, 85% 40%,
-        85% 50%, 85% 60%, 82% 65%, 77% 68%, 70% 68%, 65% 65%, 65% 55%,
-        65% 100%, 0% 100%
+        0% 0%, 90% 0%, 90% 25%, 93% 22%, 97% 22%, 100% 25%, 100% 30%, 100% 40%,
+        100% 50%, 100% 60%, 100% 65%, 97% 68%, 93% 68%, 90% 65%, 90% 55%,
+        90% 100%, 0% 100%
     );
     width: 210px;
     margin-left: -8px;
@@ -177,20 +295,20 @@ a-scene {
 /* فتحة 2 من 3 (وسطى) */
 .slot.puzzle-slot.puzzle-3-1 {
     clip-path: polygon(
-        35% 0%, 35% 25%, 30% 22%, 23% 22%, 18% 25%, 15% 30%, 15% 40%,
-        15% 50%, 15% 60%, 18% 65%, 23% 68%, 30% 68%, 35% 65%, 35% 55%,
-        35% 100%,
-        65% 100%, 65% 65%, 70% 68%, 77% 68%, 82% 65%, 85% 60%, 85% 50%,
-        85% 40%, 85% 30%, 82% 25%, 77% 22%, 70% 22%, 65% 25%, 65% 0%
+        10% 0%, 10% 25%, 7% 22%, 3% 22%, 0% 25%, 0% 30%, 0% 40%,
+        0% 50%, 0% 60%, 0% 65%, 3% 68%, 7% 68%, 10% 65%, 10% 55%,
+        10% 100%,
+        90% 100%, 90% 65%, 93% 68%, 97% 68%, 100% 65%, 100% 60%, 100% 50%,
+        100% 40%, 100% 30%, 100% 25%, 97% 22%, 93% 22%, 90% 25%, 90% 0%
     );
     width: 210px;
 }
 /* فتحة 3 من 3 */
 .slot.puzzle-slot.puzzle-3-2 {
     clip-path: polygon(
-        35% 0%, 100% 0%, 100% 100%, 35% 100%, 35% 65%,
-        30% 68%, 23% 68%, 18% 65%, 15% 60%, 15% 50%,
-        15% 40%, 18% 35%, 23% 22%, 30% 22%, 35% 25%
+        10% 0%, 100% 0%, 100% 100%, 10% 100%, 10% 65%,
+        7% 68%, 3% 68%, 0% 65%, 0% 60%, 0% 50%,
+        0% 40%, 0% 30%, 3% 22%, 7% 22%, 10% 25%
     );
     width: 210px;
     margin-right: -8px;
@@ -266,17 +384,17 @@ a-scene {
 .piece.puzzle-piece.puzzle-shape-2-0 .puzzle-inner,
 .piece.puzzle-piece.puzzle-shape-2-0 .puzzle-inner::before {
     clip-path: polygon(
-        0% 0%, 60% 0%, 60% 25%, 65% 22%, 72% 22%, 77% 25%, 80% 30%, 80% 40%,
-        80% 50%, 80% 60%, 77% 65%, 72% 68%, 65% 68%, 60% 65%, 60% 55%,
-        60% 100%, 0% 100%
+        0% 0%, 90% 0%, 90% 25%, 93% 22%, 97% 22%, 100% 25%, 100% 30%, 100% 40%,
+        100% 50%, 100% 60%, 100% 65%, 97% 68%, 93% 68%, 90% 65%, 90% 55%,
+        90% 100%, 0% 100%
     );
 }
 .piece.puzzle-piece.puzzle-shape-2-1 .puzzle-inner,
 .piece.puzzle-piece.puzzle-shape-2-1 .puzzle-inner::before {
     clip-path: polygon(
-        40% 0%, 100% 0%, 100% 100%, 40% 100%, 40% 65%,
-        35% 68%, 28% 68%, 23% 65%, 20% 60%, 20% 50%,
-        20% 40%, 23% 35%, 28% 22%, 35% 22%, 40% 25%
+        10% 0%, 100% 0%, 100% 100%, 10% 100%, 10% 65%,
+        7% 68%, 3% 68%, 0% 65%, 0% 60%, 0% 50%,
+        0% 40%, 0% 30%, 3% 22%, 7% 22%, 10% 25%
     );
 }
 
@@ -284,27 +402,27 @@ a-scene {
 .piece.puzzle-piece.puzzle-shape-3-0 .puzzle-inner,
 .piece.puzzle-piece.puzzle-shape-3-0 .puzzle-inner::before {
     clip-path: polygon(
-        0% 0%, 65% 0%, 65% 25%, 70% 22%, 77% 22%, 82% 25%, 85% 30%, 85% 40%,
-        85% 50%, 85% 60%, 82% 65%, 77% 68%, 70% 68%, 65% 65%, 65% 55%,
-        65% 100%, 0% 100%
+        0% 0%, 90% 0%, 90% 25%, 93% 22%, 97% 22%, 100% 25%, 100% 30%, 100% 40%,
+        100% 50%, 100% 60%, 100% 65%, 97% 68%, 93% 68%, 90% 65%, 90% 55%,
+        90% 100%, 0% 100%
     );
 }
 .piece.puzzle-piece.puzzle-shape-3-1 .puzzle-inner,
 .piece.puzzle-piece.puzzle-shape-3-1 .puzzle-inner::before {
     clip-path: polygon(
-        35% 0%, 35% 25%, 30% 22%, 23% 22%, 18% 25%, 15% 30%, 15% 40%,
-        15% 50%, 15% 60%, 18% 65%, 23% 68%, 30% 68%, 35% 65%, 35% 55%,
-        35% 100%,
-        65% 100%, 65% 65%, 70% 68%, 77% 68%, 82% 65%, 85% 60%, 85% 50%,
-        85% 40%, 85% 30%, 82% 25%, 77% 22%, 70% 22%, 65% 25%, 65% 0%
+        10% 0%, 10% 25%, 7% 22%, 3% 22%, 0% 25%, 0% 30%, 0% 40%,
+        0% 50%, 0% 60%, 0% 65%, 3% 68%, 7% 68%, 10% 65%, 10% 55%,
+        10% 100%,
+        90% 100%, 90% 65%, 93% 68%, 97% 68%, 100% 65%, 100% 60%, 100% 50%,
+        100% 40%, 100% 30%, 100% 25%, 97% 22%, 93% 22%, 90% 25%, 90% 0%
     );
 }
 .piece.puzzle-piece.puzzle-shape-3-2 .puzzle-inner,
 .piece.puzzle-piece.puzzle-shape-3-2 .puzzle-inner::before {
     clip-path: polygon(
-        35% 0%, 100% 0%, 100% 100%, 35% 100%, 35% 65%,
-        30% 68%, 23% 68%, 18% 65%, 15% 60%, 15% 50%,
-        15% 40%, 18% 35%, 23% 22%, 30% 22%, 35% 25%
+        10% 0%, 100% 0%, 100% 100%, 10% 100%, 10% 65%,
+        7% 68%, 3% 68%, 0% 65%, 0% 60%, 0% 50%,
+        0% 40%, 0% 30%, 3% 22%, 7% 22%, 10% 25%
     );
 }
 
@@ -376,9 +494,11 @@ a-scene {
 /* ── feedback ── */
 #feedback {
     position:fixed; top:32px; left:50%; transform:translateX(-50%);
-    width:92%; max-width:600px; background:#fff; border-radius:20px;
-    padding:18px 28px; box-shadow:0 12px 40px rgba(0,0,0,0.15);
-    z-index:150; border-right:6px solid var(--success);
+    width:92%; max-width:600px; background: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px);
+    border-radius:20px;
+    padding:18px 28px; box-shadow:0 12px 40px rgba(0,0,0,0.3);
+    z-index:999999; border-right:6px solid var(--success);
 }
 .feedback-content { display:flex; justify-content:space-between; align-items:center; gap:14px; }
 #feedback-title   { font-size:22px; font-weight:800; color:var(--success); }
@@ -742,4 +862,45 @@ a-scene {
 }
 .slot-snapped {
     animation: slot-snap 0.2s ease;
+}
+/* نافذة كلمة المرور */
+.password-content { 
+    max-width: 450px !important; 
+    border-top: 6px solid #546E7A;
+}
+
+#teacher-password-input {
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    background: #FAFAFA;
+}
+
+#teacher-password-input::placeholder {
+    letter-spacing: normal;
+    font-size: 1.1rem;
+    color: #999;
+}
+
+.password-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.error-msg {
+    color: #EF5350;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    background: #FFEBEE;
+    padding: 8px 12px;
+    border-radius: 8px;
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
 }
